@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-function App() {
+import LandingPage from './sides/landing_page'
+import Vorstand from './sides/vorstand'
+import Events from './sides/events'
+import News from './sides/news'
+import Positions from './sides/positions'
+import BecomeMember from './sides/become_member'
+import ViewArticle from './sides/view_article'
+import Contact from './sides/contact'
+import Mitmachen from './sides/mitmachen';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-['Helvatica Neue']">
+        <Router>
+          <Routes>
+            <Route path="/home" element={<LandingPage />} /> 
+            <Route path="/mitmachen" element={<Mitmachen />} />
+            <Route path="/mitglied-werden" element={<BecomeMember />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/vorstand" element={<Vorstand />} />
+            <Route path="/positionen" element={<Positions />} />
+            <Route path="/aktuelles" element={<News />} />
+            <Route path="/position" element={<ViewArticle />} />
+            <Route path="/article" element={<ViewArticle />} />
+            <Route path="/contact" element={<Contact />} />
+            {/*<Route path="*" element={<Navigate to="/home" replace />} />*/}
+          </Routes>
+      </Router>
     </div>
   );
 }

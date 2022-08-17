@@ -1,0 +1,42 @@
+import React from 'react'
+import { AiOutlineMenu, AiOutlineClose, AiFillCaretDown, AiFillCaretRight } from 'react-icons/ai'
+import {Link} from 'react-router-dom'
+import { useState } from 'react'
+
+const SideBar = () => {
+    const [showMore, setShowMore] = useState(false)
+    return (
+    <div className='absolute z-30 w-full top-[4.5rem] bg-accent-blue-3 border-t border-gray-300 uppercase sm:hidden'>
+        <ul className='m-auto py-2 font-semibold text-lg'>
+            <li className='py-3  text-white  hover:bg-accent-blue-2'><Link to='/home'><div className='w-[90%] mx-auto'>Startseite</div></Link></li>
+            <a href="#" onClick={() => setShowMore(!showMore)}>
+                <li className='py-3 bg-accent-blue-3 text-white hover:bg-accent-blue-2 border-t border-gray-600'>
+                    <div className='w-[90%] mx-auto'>
+                        Über uns 
+                        {!showMore ? 
+                        <AiFillCaretRight className='float-right accent-blue-1 mt-1 mr-3' /> :
+                        <AiFillCaretDown className='float-right accent-blue-1 mt-1 mr-3' />
+                        }
+                    </div>
+                </li>
+            </a>
+            {showMore && <div className='border-t border-gray-600 bg-decent-blue font-medium'>
+                 <ul>
+                    <li><Link to='/aktuelles'><div className='w-[85%] mx-auto pb-3 pt-4 group'>
+                        Aktuelles
+                    </div></Link></li>
+                    <li className='border-y border-gray-400'><Link to='/events'><div className='w-[85%] mx-auto py-3'>
+                        Termine und Veranstaltungen
+                    </div></Link></li>
+                    <li><Link to='/vorstand'><div className='w-[85%] mx-auto pt-3 pb-4'>
+                        Vorstand
+                    </div></Link></li>
+                </ul>
+            </div>}
+            <li className='py-3 border-t border-gray-600 text-white  hover:bg-accent-blue-2'><Link to='/positionen'><div className='w-[90%] mx-auto'>Positionen</div></Link></li>
+            <li className='py-3 border-t border-gray-600 bg-accent-blue-3 text-white  hover:bg-accent-blue-2'><Link to='/contact'><div className='w-[90%] mx-auto'>Kontakt</div></Link></li>
+        </ul>
+    </div>
+    )
+}
+export default SideBar
