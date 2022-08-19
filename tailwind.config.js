@@ -15,11 +15,15 @@ module.exports = {
       'accent-blue-3-hover': '#2b4780',
       'decent-blue': '#F3F9FF',
       },
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
     },
     screens: {
       '3xs': '420px',
       'xxs': '475px',
       'xs': '550px',
+      'm-l': '900px',
       ...defaultTheme.screens,
     },
   },

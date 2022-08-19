@@ -3,7 +3,7 @@ import {Giancarlo} from '../images/Giancarlo.jpg'
 
 const Introduction = () => {
   return (
-    <div className='mt-12 block w-full h-auto'>
+    <div className='mt-10 inline-block w-full h-auto'>
       <div className='hidden md:block w-full h-auto'>
         <div className='float-left w-[70%]'>
           <p className='text-2xl font-bold rounded-sm'>Herzlich Willkommen bei der JU Kirchheim</p>
@@ -30,7 +30,7 @@ const Introduction = () => {
       </div>
 
 
-      <div className='mt-12 md:hidden'>
+      <div className='md:hidden'>
         <p className='text-xl font-bold rounded-sm w-full'>Herzlich Willkommen bei der JU Kirchheim</p>
         
         <img src="https://media.discordapp.net/attachments/804256706514649159/1009546492664627341/HJR-5D4-02240-768x512_1.jpg"

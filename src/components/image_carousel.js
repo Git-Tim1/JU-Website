@@ -27,7 +27,7 @@ const ImageCarousel = () => {
 
     
     return (
-        <div className='mt-[6rem]'>
+        <div className='mt-[1.5rem] inline-block w-full'>
             {/*<a href="#"><BsFillArrowLeftCircleFill size={30} 
                 className='absolute 
                 top-[15rem] left-[8%] z-50'/></a>
@@ -36,12 +36,12 @@ const ImageCarousel = () => {
             <div className='absolute flex flex-row z-20 w-[4.5rem] h-auto text-white justify-between 
             left-[calc(50%-36px)] top-[calc(6rem+300px)] sm:top-[calc(6rem+355px)] md:top-[calc(6rem+415px)]
             '>
-                <a href="#" onClick={() => setCurrentSlide(0)}>
+                <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(0)}}>
                     <BsCircleFill size={10} className={currentSlide == 0 ? "opacity-100" : "opacity-50"} />
                 </a>
-                <a href="#" onClick={() => setCurrentSlide(1)}><BsCircleFill size={10} className={currentSlide == 1 ? "opacity-100" : "opacity-50"} /></a>
-                <a href="#" onClick={() => setCurrentSlide(2)}><BsCircleFill size={10} className={currentSlide == 2 ? "opacity-100" : "opacity-50"} /></a>
-                <a href="#" onClick={() => setCurrentSlide(3)}><BsCircleFill size={10} className={currentSlide == 3 ? "opacity-100" : "opacity-50"} /></a>
+                <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(1)}}><BsCircleFill size={10} className={currentSlide == 1 ? "opacity-100" : "opacity-50"} /></a>
+                <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(2)}}><BsCircleFill size={10} className={currentSlide == 2 ? "opacity-100" : "opacity-50"} /></a>
+                <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(3)}}><BsCircleFill size={10} className={currentSlide == 3 ? "opacity-100" : "opacity-50"} /></a>
             </div>
             
             {sliderData.map((slide, index) => {

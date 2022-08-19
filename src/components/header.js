@@ -35,7 +35,7 @@ const Header = () => {
                     </ul>
                     
                     
-                    <a className='float-left h-full w-auto flex' href="#" onClick={() => setMobileNavBar(!mobileNavBar)} >
+                    <a className='float-left h-full w-auto flex' href="#" onClick={e => {e.preventDefault(); setMobileNavBar(!mobileNavBar)}} >
                         {!mobileNavBar ? 
                         <AiOutlineMenu size={25} className='sm:hidden my-auto'/> 
                         : 
@@ -52,7 +52,9 @@ const Header = () => {
 
                 </div>
             </header>
-
+            <div onClick={() => setMobileNavBar(false)}
+                className={`${mobileNavBar ? 'block' : 'hidden'} bg-black fixed opacity-10 z-10 h-full w-full`}>
+            </div>
             {mobileNavBar && <SideBar />}
         </>
     )
