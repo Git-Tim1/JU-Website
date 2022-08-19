@@ -5,7 +5,7 @@ import { BsInstagram, BsFacebook } from 'react-icons/bs'
 const Footer = ({}) => {
   return (
     <footer className='w-full h-44 3xs:h-36 sm:h-20 bg-accent-blue-3 text-white bottom-0 overflow-hidden text-xs'>
-      <div className='h-full max-w-[60rem] w-[90%] mx-auto'>
+      <div className='min-h-[100vh] max-w-[60rem] w-[90%] mx-auto'>
         <div className='xs:float-left mt-3 mr-6 sm:mr-10 inline-block'>
             <p>Junge Union Stadtverband Kirchheim unter Teck</p>
             <p className='my-[2px]'>kontakt@ju-kirchheim.de</p>

@@ -18,7 +18,7 @@ const App = () => {
             <Route path="/home" element={<LandingPage />} /> 
             <Route path="/mitmachen" element={<Mitmachen />} />
             <Route path="/mitglied-werden" element={<BecomeMember />} />
-            <Route path="/aktuelles" element={<Events />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/vorstand" element={<Vorstand />} />
             <Route path="/positionen" element={<Positions />} />
             <Route path="/aktuelles" element={<News />} />
