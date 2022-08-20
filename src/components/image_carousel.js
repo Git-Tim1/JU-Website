@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFil, BsCircleFill } from 'react-icons/bs'
+import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill, BsCircleFill } from 'react-icons/bs'
 import { sliderData } from '../data/slider_data'
 import { Link } from 'react-router-dom'
 
@@ -12,12 +12,16 @@ const ImageCarousel = () => {
     const autoSlide = () => {
         slideInterval = setInterval(() => setCurrentSlide(currentSlide + 1), intervalTime)
 
-        if (currentSlide == 4) {
-            setCurrentSlide(0)
-        }
+        
     }
 
     useEffect(() => {
+        if (currentSlide == 4) {
+            setCurrentSlide(0)
+        }
+        else if (currentSlide == -1) {
+            setCurrentSlide(3)
+        }
         if (autoscroll) {
              autoSlide()
         }
@@ -27,14 +31,19 @@ const ImageCarousel = () => {
 
     
     return (
-        <div className='mt-[1.5rem] inline-block w-full'>
-            {/*<a href="#"><BsFillArrowLeftCircleFill size={30} 
-                className='absolute 
-                top-[15rem] left-[8%] z-50'/></a>
-            <BsFillArrowRightCircleFill size={30} className='absolute top-0 right-0 z-50'/>*/}
+        <div className='mt-[1.5rem] inline-block w-full group relative'>
+            <div className='hidden group-hover:block relative text-white'>
+                <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(currentSlide - 1)}}>
+                    <BsFillArrowLeftCircleFill size={30} 
+                    className='absolute top-36 sm:top-44 md:top-44 left-4 z-50'/>
+                </a>
+                <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(currentSlide + 1)}}>
+                    <BsFillArrowRightCircleFill size={30} className='absolute top-36 sm:top-44 md:top-48 right-4 z-50'/>
+                </a>
+            </div>
             
-            <div className='absolute flex flex-row z-20 w-[4.5rem] h-auto text-white justify-between 
-            left-[calc(50%-36px)] top-[calc(6rem+300px)] sm:top-[calc(6rem+355px)] md:top-[calc(6rem+415px)]
+            <div className='absolute flex flex-row z-30 w-[4.5rem] h-auto text-white justify-between 
+            left-[calc(50%-36px)] top-[300px] sm:top-[355px] md:top-[415px]
             '>
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(0)}}>
                     <BsCircleFill size={10} className={currentSlide == 0 ? "opacity-100" : "opacity-50"} />
