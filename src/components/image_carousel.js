@@ -32,7 +32,7 @@ const ImageCarousel = () => {
     
     return (
         <div className='mt-[1.5rem] inline-block w-full group relative'>
-            <div className='hidden group-hover:block relative text-white'>
+            <div className='block sm:hidden group-hover:block relative text-white'>
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(currentSlide - 1)}}>
                     <BsFillArrowLeftCircleFill size={30} 
                     className='absolute top-36 sm:top-44 md:top-44 left-4 z-50'/>
