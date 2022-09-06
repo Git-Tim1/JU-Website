@@ -72,7 +72,7 @@ const ImageCarousel = () => {
                                 sm:left-9 sm:bottom-10 sm:text-xl sm:px-[14px] sm:py-[6px]
                                 lg:left-10 lg:bottom-12 lg:text-2xl 
                                 '
-                                >{slide.title}</p>
+                                >{slide.short_title}</p>
 
                                 
                             </Link>

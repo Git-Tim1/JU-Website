@@ -1,5 +1,5 @@
 import React from 'react'
-import LP_Position from './lp_position'
+import Position from './position'
 import { positionData } from '../data/position_data'
 import { Link } from 'react-router-dom'
 
@@ -15,10 +15,11 @@ const LP_Positions = () => {
                         <>
                             {
                                 (index < 6) && 
-                                <LP_Position 
+                                <Position 
                                     image={position.picture} 
                                     title={position.title} 
                                     link={position.link} 
+                                    lp={true}
                                 />
                             }
                         </>

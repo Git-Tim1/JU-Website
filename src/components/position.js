@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const LP_Position = ({ title, image, link }) => {
+const Position = ({ title, image, link, lp }) => {
     return (        
         <a href={ link } className='w-full inline-block relative mt-1 opacity-90 hover:opacity-100 drop-shadow hover:drop-shadow-lg'>
-            <img className='object-cover aspect-4/3 xxs:aspect-video sm:aspect-4/3 md:aspect-video lg:aspect-4/3' src={image} />
+            <img className={`object-cover aspect-4/3 xxs:aspect-video sm:aspect-4/3 md:aspect-video ${lp && 'lg:aspect-4/3'} }`} src={image} />
             <h1 className='absolute
                 text-lg 3xs:text-xl sm:text-lg md:text-xl 
                 w-auto max-w-[90%]
@@ -18,4 +18,4 @@ const LP_Position = ({ title, image, link }) => {
   )
 }
 
-export default LP_Position
+export default Position
