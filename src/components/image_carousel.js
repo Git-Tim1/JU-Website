@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill, BsCircleFill } from 'react-icons/bs'
-import { sliderData } from '../data/slider_data'
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
+import { articleData } from '../data/articleData'
 import { Link } from 'react-router-dom'
 
 const ImageCarousel = () => {
@@ -34,11 +35,11 @@ const ImageCarousel = () => {
         <div className='mt-[1.5rem] inline-block w-full group relative'>
             <div className='block sm:hidden group-hover:block relative text-white'>
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(currentSlide - 1)}}>
-                    <BsFillArrowLeftCircleFill size={30} 
-                    className='absolute top-36 sm:top-44 md:top-44 left-4 z-50'/>
+                    <MdKeyboardArrowLeft size={40} 
+                    className='absolute top-36 sm:top-44 md:top-48 left-0 z-10 bg-accent-blue-1'/>
                 </a>
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(currentSlide + 1)}}>
-                    <BsFillArrowRightCircleFill size={30} className='absolute top-36 sm:top-44 md:top-48 right-4 z-50'/>
+                    <MdKeyboardArrowRight size={40} className='absolute top-36 sm:top-44 md:top-48 right-0 z-10 bg-accent-blue-1'/>
                 </a>
             </div>
             
@@ -53,7 +54,7 @@ const ImageCarousel = () => {
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(3)}}><BsCircleFill size={10} className={currentSlide == 3 ? "opacity-100" : "opacity-50"} /></a>
             </div>
             
-            {sliderData.map((slide, index) => {
+            {articleData.map((slide, index) => {
                 return (
                     <div className={index === currentSlide ? "slide current" : "slide"} key={index}>
                         {index === currentSlide && (
@@ -71,7 +72,7 @@ const ImageCarousel = () => {
                                 sm:left-9 sm:bottom-10 sm:text-xl sm:px-[14px] sm:py-[6px]
                                 lg:left-10 lg:bottom-12 lg:text-2xl 
                                 '
-                                >{slide.heading}</p>
+                                >{slide.title}</p>
 
                                 
                             </Link>

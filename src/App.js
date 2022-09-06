@@ -22,7 +22,9 @@ const App = () => {
             <Route path="/vorstand" element={<Vorstand />} />
             <Route path="/positionen" element={<Positions />} />
             <Route path="/aktuelles" element={<News />} />
-            <Route path="/position" element={<ViewArticle />} />
+            <Route path="/position">
+              <Route path=':id' element={<ViewArticle />} />
+            </Route>
             <Route path="/article" element={<ViewArticle />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
