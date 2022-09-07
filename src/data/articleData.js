@@ -1,7 +1,7 @@
 export const articleData = [
     {
         image: 'https://ju-kirchheim.de/wp-content/uploads/2022/07/40AD8ACA-EC38-4CBC-9E73-C51FEBA12507.jpg',
-        title: 'Nach 2 Jahren Pause: Endlich Sommerfest',
+        title: 'Nach 2 Jahren Pause: Endlich Sommerfest Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor',
         short_title: 'Nach 2 Jahren Pause: Endlich Sommerfest',
         preview: 'Das ist ein Test', 
         link: '/endlich-sommerfest',
