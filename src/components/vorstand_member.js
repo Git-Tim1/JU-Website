@@ -1,12 +1,18 @@
-import React, { useEffect }  from 'react'
+import React, { useEffect, useState }  from 'react'
 import { BsInstagram, BsTwitter } from 'react-icons/bs'
 import { FiMail } from 'react-icons/fi'
 
-const VorstandMember = ({ image, name, occupation, role, twitter, instagram, e_mail }) => {
+const VorstandMember = ({ image, name, occupation, role, twitter, instagram, e_mail, introduction, index }) => {
+  const [urlName, setUrlName] = useState("")
 
+  useEffect(() => {
+    console.log(introduction)
+    console.log("/personen/" + encodeURI(name) + "+" + index)
+    setUrlName("/personen/" + encodeURI(name) + "+" + index)
+  }, [])
  
   return (
-    <div className='h-32 mt-4'>
+    <a href={(introduction !== '') && urlName} className='h-32 mt-4 inline-block w-full'>
         <img className='h-28 3xs:h-full w-28 3xs:w-32 object-cover float-left mt-2 3xs:mt-1' src={image} />
         <div className='float-left w-[calc(100%-8.75rem)] 3xs:w-[calc(100%-9rem)] h-full ml-3 3xs:ml-4 relative'>
             <h2 className='text-accent-blue-2 font-normal '>{role}</h2>
@@ -18,7 +24,7 @@ const VorstandMember = ({ image, name, occupation, role, twitter, instagram, e_m
               { e_mail && <a className='float-left ml-3' href={`mailto:${e_mail}`}><FiMail size={25} /></a>}
             </div>
         </div>
-    </div>
+    </a>
   )
 }
 

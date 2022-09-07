@@ -7,7 +7,7 @@ export const vorstand_data = [
         twitter: 'https://twitter.com/g_crescente',
         instagram: 'https://instagram.com/g__crescente',
         e_mail: 'giancarlo.crescente@ju-kirchheim.de',
-        introduction: 'Aktuell besuche ich das Wirtschaftsgymnasium der Jakob – Friedrich – Schöllkopf – Schule in Kirchheim/Teck. In meiner Freizeit verbringe ich viel Zeit mit meinem Hund und gehe gerne wandern. Im Jahr 2020 wurde ich außerdem 2.Regionalsieger und 2021 3.Landessieger des Wettbewerbs Jugend debattiert. In die Jungen Union bin ich  eingetreten, um unsere Heimat mitzugestallten. Nun darf ich seit dem 20.August 2021 die Junge Union Kirchheim führen. Außerdem bin ich Vorstandsmitglied der Jungen Union im Kreis Esslingen, sowie der CDU Teck. \n Jung und konservativ – das passt!'
+        introduction: 'Aktuell besuche ich das Wirtschaftsgymnasium der Jakob – Friedrich – Schöllkopf – Schule in Kirchheim/Teck. \n In meiner Freizeit verbringe ich viel Zeit mit meinem Hund und gehe gerne wandern. Im Jahr 2020 wurde ich außerdem 2.Regionalsieger und 2021 3.Landessieger des Wettbewerbs Jugend debattiert. \n In die Jungen Union bin ich  eingetreten, um unsere Heimat mitzugestallten. Nun darf ich seit dem 20.August 2021 die Junge Union Kirchheim führen. Außerdem bin ich Vorstandsmitglied der Jungen Union im Kreis Esslingen, sowie der CDU Teck. \n \n Jung und konservativ – das passt!'
     },
     {
         name: 'Finn Gerlinger',
