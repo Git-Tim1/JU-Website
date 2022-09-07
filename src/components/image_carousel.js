@@ -43,7 +43,7 @@ const ImageCarousel = () => {
                 </a>
             </div>
             
-            <div className='absolute flex flex-row z-30 w-[4.5rem] h-auto text-white justify-between 
+            <div className='absolute flex flex-row z-20 w-[4.5rem] h-auto text-white justify-between 
             left-[calc(50%-36px)] top-[300px] sm:top-[355px] md:top-[415px]
             '>
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(0)}}>

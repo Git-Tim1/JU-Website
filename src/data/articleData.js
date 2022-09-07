@@ -5,7 +5,7 @@ export const articleData = [
         short_title: 'Nach 2 Jahren Pause: Endlich Sommerfest',
         preview: 'Das ist ein Test', 
         link: '/endlich-sommerfest',
-        content: 'editorJS JSON formatted content as string',
+        content: 'Gemeinsam mit der CDU Teck feierten wir diesen Sommer wieder unser legendäres Sommerfest. Mit rund 70 Anwesenden genossen wir bis spät in die Nacht die tolle Stimmung. \n \n Highlights waren die frisch zubereiteten Spareribs, der Fassanstich durch die Vorsitzenden und die Poolparty. Herzlichen Dank an alle Helfer, die diesen unvergesslichen Abend möglich gemacht haben.',
         date: '1661016448',
         author: {
             username: 'Giancarlo Crescente',
