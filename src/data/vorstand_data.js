@@ -1,4 +1,4 @@
-export const vorstandData = [
+export const vorstand_data = [
     {
         name: 'Giancarlo Crescente',
         role: 'Vorsitzender',
@@ -11,7 +11,7 @@ export const vorstandData = [
     },
     {
         name: 'Finn Gerlinger',
-        role: 'Stellvertretender Vorsitzender',
+        role: 'stellv. Vorsitzender',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/2048px-No_image_available.svg.png',
         occupation: '',
         twitter: '',
@@ -21,7 +21,7 @@ export const vorstandData = [
     },
     {
         name: 'Emil Hennrich',
-        role: 'stellv. Vorsitzender',
+        role: 'Finanzreferent',
         image: 'https://ju-kirchheim.de/wp-content/uploads/2014/10/emilhennrich-768x576.jpg',
         occupation: 'Automobielkaufmann',
         twitter: '',
@@ -71,9 +71,9 @@ export const vorstandData = [
         introduction: ''
     },
     {
-        name: 'Isabell Müller',
+        name: 'Melina Lienert',
         role: 'Kassenprüferin',
-        image: 'https://ju-kirchheim.de/wp-content/uploads/2021/11/HJR-5D4-02211-768x512.jpg',
+        image: 'https://ju-kirchheim.de/wp-content/uploads/2021/11/HJR-5D4-02236-768x512.jpg',
         occupation: '',
         twitter: '',
         instagram: '',
