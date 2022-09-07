@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/header'
 import Position from '../components/position'
 import { positionData } from '../data/position_data'
 
 const Positions = () => {
+  useEffect(() => {
+    document.title = "Positionen - Junge Union Kirchheim"
+  }, []);
   return (
     <div>
       <Header />

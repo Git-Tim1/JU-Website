@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/header'
 import { vorstand_data } from '../data/vorstand_data'
 import VorstandMember from '../components/vorstand_member'
 
 const Vorstand = () => {
+  useEffect(() => {
+    document.title = "Ortsvorstand - Junge Union Kirchheim"
+  }, []);
+
   return (
     <div>
       <Header />

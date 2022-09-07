@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/header'
 
 const ViewArticle = ({ id }) => {
+  useEffect(() => {
+    document.title = "Junge Union Kirchheim"
+  }, []);
   return (
     <div>
       <Header />

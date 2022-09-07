@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect }  from 'react'
 import { BsInstagram, BsTwitter } from 'react-icons/bs'
 import { FiMail } from 'react-icons/fi'
 
 const VorstandMember = ({ image, name, occupation, role, twitter, instagram, e_mail }) => {
+
+ 
   return (
     <div className='h-32 mt-4'>
         <img className='h-28 3xs:h-full w-28 3xs:w-32 object-cover float-left mt-2 3xs:mt-1' src={image} />

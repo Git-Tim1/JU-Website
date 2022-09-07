@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import ImageCarousel from '../components/image_carousel'
@@ -8,6 +8,9 @@ import LP_Positions from '../components/lp_positions'
 import SideBar from '../components/side_bar'
 
 const LandingPage = () => {
+  useEffect(() => {
+    document.title = "Junge Union Kirchheim"
+  }, []);
   return (
     <div>
       <Header />

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/header'
 import Event from '../components/event'
 import Footer from '../components/footer'
 import { eventData } from '../data/event_data'
 
 const Events = () => {
+  useEffect(() => {
+    document.title = "Veranstaltungen - Junge Union Kirchheim"
+  }, []);
   return (
     <div className='h-full'>
       <Header />
