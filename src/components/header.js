@@ -52,7 +52,7 @@ const Header = () => {
 
                 </div>
             </header>
-            <div onClick={() => setMobileNavBar(false)}
+            <div onClick={() => setMobileNavBar(false)} onTouchStart={() => setMobileNavBar(false)}
                 className={`${mobileNavBar ? 'block' : 'hidden'} bg-black fixed opacity-10 z-10 h-full w-full`}>
             </div>
             {mobileNavBar && <SideBar />}
