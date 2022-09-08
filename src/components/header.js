@@ -44,8 +44,8 @@ const Header = () => {
                     
 
                     <Link to="/home"><img className='float-right h-full' src="https://ju-kirchheim.de/wp-content/uploads/2019/05/ju-logo-3-e1558030740569.png" alt="JU Kirchheim Logo" /></Link>
-                    <Link className='px-4 h-[60%] border border-accent-blue-2 float-right shadow-sm
-                    hover:bg-accent-blue-2 focus:bg-accent-blue-2 focus:text-white hover:text-white flex mt-[15px] rounded-sm mr-4' 
+                    <Link className='hidden 3xs:flex px-4 h-3/5 border border-accent-blue-2 float-right shadow-sm text-sm 4xs:text-base
+                    hover:bg-accent-blue-2 focus:bg-accent-blue-2 focus:text-white hover:text-white mt-[15px] rounded-sm mr-4' 
                     to="/mitmachen">
                         <p className='m-auto'>Mitmachen</p>
                     </Link>

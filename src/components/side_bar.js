@@ -34,6 +34,7 @@ const SideBar = () => {
                 </ul>
             </div>}
             <li className='py-3 border-t border-gray-600 text-white  hover:bg-accent-blue-2'><Link to='/positionen'><div className='w-[90%] mx-auto'>Positionen</div></Link></li>
+            <li className='block 3xs:hidden py-3 border-t border-gray-600 text-white  hover:bg-accent-blue-2'><Link to='/mitmachen'><div className='w-[90%] mx-auto'>Mitmachen</div></Link></li>
             <li className='py-3 border-t border-gray-600 bg-accent-blue-3 text-white  hover:bg-accent-blue-2'><Link to='/contact'><div className='w-[90%] mx-auto'>Kontakt</div></Link></li>
         </ul>
     </div>
