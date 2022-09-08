@@ -18,9 +18,9 @@ const Positions = () => {
                     return (
                         <Position 
                           image={position.picture} 
-                          title={position.title} 
-                          link={position.link} 
+                          topic={position.topic}  
                           lp={false}
+                          index={index}
                         />
                     )
                 })

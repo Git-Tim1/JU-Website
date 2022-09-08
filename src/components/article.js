@@ -22,7 +22,7 @@ const ArticleComponent = ({image, title, content, link, unixTime, author}) => {
         
         <div className='ml-[4%] xxs:ml-[3%] sm:ml-4 mt-4 sm:mt-3 float-left w-[92%] xxs:w-[94%] sm:w-[calc(100%-18rem)]'>
             <p className='text-gray-800 font-medium text-[15px]'>{author} • {date}</p>
-            <h1 className='text-lg xxs:text-xl lg:text-2xl max-h-[5.25rem] xxs:max-h-14 sm:max-h-[7rem] md:max-h-14 lg:max-h-16 overflow-hidden font-bold'>{title}</h1>
+            <h1 className='text-lg xxs:text-xl max-h-[5.25rem] xxs:max-h-14 sm:max-h-[7rem] md:max-h-14 overflow-hidden font-bold'>{title}</h1>
             <p className='sm:hidden md:block mt-1 text-gray-700 text-base max-h-[4.5rem] sm:max-h-12 overflow-hidden'>{content}</p>
             <div className='block h-5 sm:hidden'></div>
         </div>

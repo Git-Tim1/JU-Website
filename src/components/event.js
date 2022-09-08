@@ -12,7 +12,7 @@ const Event = ({Day, Month, EventName, Description}) => {
                 <h2 className='text-base xs:text-lg font-medium text-center w-full inline-block ml-1 sm:ml-0'>{Month}</h2>
             </div>
             <div className='float-left w-[calc(100%-100px)]  3xs:w-[calc(100%-105px)] xs:w-[calc(100%-130px)] sm:w-[calc(100%-150px)] h-full flex items-center justify-between'>
-                <h1 className='text-base 3xs:text-lg xxs:text-[19px] sm:text-xl md:text-[22px] font-bold ml-2 max-w-[80%]'>{EventName}</h1>
+                <h1 className='text-[15px] 4xs:text-base 3xs:text-lg xxs:text-[19px] sm:text-xl md:text-[22px] font-bold ml-2 max-w-[80%]'>{EventName}</h1>
                 <AiOutlinePlus  size={30} className={`mr-4 xs:mr-6 sm:mr-8 ${showMore && 'hidden'}`} />
                 <AiOutlineMinus size={30} className={`mr-4 xs:mr-6 sm:mr-8 ${!showMore && 'hidden'}`} />
             </div>

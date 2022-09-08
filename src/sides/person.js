@@ -6,12 +6,12 @@ import { vorstand_data } from '../data/vorstand_data'
 
 const Person = () => {
     let navigate = useNavigate()
-    let { personid } = useParams()
+    let { personID } = useParams()
     
     let [id, setID] = useState(0)
 
     useEffect(() => {
-        setID(personid.split("+")[1])
+        setID(personID.split("+")[1])
     }, [])
 
     return (

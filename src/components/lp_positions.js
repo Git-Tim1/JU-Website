@@ -17,9 +17,9 @@ const LP_Positions = () => {
                                 (index < 6) && 
                                 <Position 
                                     image={position.picture} 
-                                    title={position.title} 
-                                    link={position.link} 
+                                    topic={position.topic} 
                                     lp={true}
+                                    index={index}
                                 />
                             }
                         </>

@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 
 
-const Position = ({ title, image, link, lp }) => {
+const Position = ({ topic, image, lp, index }) => {
+    const [link, setLink] = useState(null)
+    useEffect(() => {
+      setLink(encodeURI(topic) + "&" + index)
+    }, [])
+    
     return (        
-        <a href={ link } className='w-full inline-block relative mt-1 opacity-90 hover:opacity-100 drop-shadow hover:drop-shadow-lg'>
+        <a href={"/position/" + link} className='w-full inline-block relative mt-1 opacity-90 hover:opacity-100 drop-shadow hover:drop-shadow-lg'>
             <img className={`object-cover aspect-4/3 xxs:aspect-video sm:aspect-4/3 md:aspect-video ${lp && 'lg:aspect-4/3'} }`} src={image} />
             <h1 className='absolute
                 text-lg 3xs:text-xl sm:text-lg md:text-xl 
@@ -13,7 +18,7 @@ const Position = ({ title, image, link, lp }) => {
                 left-3 bottom-3  
                 bg-accent-blue-3 text-white 
                 px-2 py-1 z-10'>
-            {title}</h1> 
+            {topic}</h1> 
         </a>
   )
 }

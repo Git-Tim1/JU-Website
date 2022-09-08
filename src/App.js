@@ -10,6 +10,7 @@ import ViewArticle from './sides/view_article'
 import Contact from './sides/contact'
 import Mitmachen from './sides/mitmachen';
 import Person from './sides/person';
+import ViewPosition from './sides/view_position';
 
 const App = () => {
   return (
@@ -24,10 +25,10 @@ const App = () => {
             <Route path="/positionen" element={<Positions />} />
             <Route path="/aktuelles" element={<News />} />
             <Route path="/position/">
-              <Route path=':id' element={<ViewArticle />} />
+              <Route path=':positionID' element={<ViewPosition />} />
             </Route>
             <Route path="/personen/">
-              <Route path=':personid' element={<Person />} />
+              <Route path=':personID' element={<Person />} />
             </Route>
             <Route path="/article" element={<ViewArticle />} />
             <Route path="/contact" element={<Contact />} />
