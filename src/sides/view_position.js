@@ -18,6 +18,7 @@ const ViewPosition = () => {
 
         console.log(newID)
 
+        document.title = positionData[newID].topic + " - Junge Union Kirchheim"
 
         let unixTime = positionData[newID].date_time
 
