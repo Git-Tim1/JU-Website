@@ -11,10 +11,16 @@ const ImageCarousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
 
     const autoSlide = () => {
-        slideInterval = setInterval(() => setCurrentSlide(currentSlide + 1), intervalTime)
-
-        
+        slideInterval = setInterval(() => setCurrentSlide(currentSlide + 1), intervalTime)    
     }
+
+    useEffect(() => {
+        fetch('https://api.wrire.com/partner/admin?page=0', { // fetch data from backend server
+            method: 'GET',
+        }).then((response) =>  response.json().then((data)=>{
+            console.log(data)
+        }))
+    }, [])
 
     useEffect(() => {
         if (currentSlide == 4) {
