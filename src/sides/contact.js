@@ -47,8 +47,6 @@ const Contact = () => {
         <h1 className='font-bold text-xl sm:text-2xl mt-6 inline-block'>Kontakt</h1>
         <p className='mt-3'>Dich stört in deiner Gemeinde etwas? Du willst dich für eine Veranstaltung anmelden oder hast sogar Interesse an einer Mitgliedschaft? Dein schreib uns über unser Kontaktformular!</p>
         
-        {completeData && <p className='font-semibold mt-2 text-lg text-red-600'>Formular nicht vollständig ausgefüllt</p>}
-        
         <InputField datapoint='Name' type='text' inputData={inputData => {setData({...data, name: inputData})}} />
         <InputField datapoint='E-Mail' type='e-mail' inputData={inputData => {setData({...data, e_mail: inputData})}} />
         <label className='font-semibold text-lg mt-3 inline-block'>Nachricht</label>
@@ -64,7 +62,7 @@ const Contact = () => {
           <p className='w-[calc(100%-25px)] float-right mt-2 font-medium'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
         </div>
         <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-3 text-white px-4 py-1.5 text-lg font-semibold mt-2 mb-4' value="Senden" />
-        
+        {completeData && <p className='italic text-gray-700 mt-3'>Formular nicht vollständig ausgefüllt</p>}
       </form>
       <Footer />
     </div>

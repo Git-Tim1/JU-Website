@@ -3,6 +3,7 @@ import Header from '../components/header'
 import Select from 'react-select'
 import InputField from '../components/input_field'
 import Footer from '../components/footer'
+import Form from 'react-bootstrap/Form'
 
 
 const BecomeMember = () => {
@@ -11,22 +12,43 @@ const BecomeMember = () => {
   }, []);
 
   
-
-  const [data, setData] = useState({sex: "", vorname: "", nachname: "", e_mail: "", street_and_number: "", place_of_residence:"", zip:"", birth_date: "", bank_name: "",  iban: "", bic: "", checked: false})
+  const [send, setSend] = useState(false)
+  const [data, setData] = useState({sex: "male", vorname: "", nachname: "", e_mail: "", street_and_number: "", place_of_residence:"", zip:"", birth_date: "", bank_name: "",  iban: "", bic: "", checked: false})
   const [completeData, setCompleteData] = useState(false)
 
 
   useEffect(() => {
     console.log(data)
   }, [data])
+
+  const submitData = () => {
+    console.log("submit")
+    let formdata = new FormData()
+    for ( var key in data ) {
+      key != "checked" && formdata.append(key, data[key]);
+    }
+    console.log(formdata)
+    fetch("https://api.wrire.com/partner/ju-kirchheim/form", {
+      method: "POST",
+      content: formdata
+    }).then((r) => {console.log(r); setSend(true)})
+
+
+
+  }
   
   const handleSubmit = () => {
-    console.log(null)
+    if (data.sex !== "" && data.vorname !== "" && data.nachname !== "" && data.e_mail !== "" && data.street_and_number !== "" && data.place_of_residence !== "" && data.zip !== "" && data.birth_date !== "" && data.checked === true ){
+      submitData()
+    } else {
+      setCompleteData(true)
+    }
   }
 
   return (
     <div>
       <Header />
+      {!send ?
       <form className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] mb-10'>
         <h1 className='font-bold text-xl sm:text-2xl mt-6 inline-block'>Mitglied werden</h1>
 
@@ -63,8 +85,17 @@ const BecomeMember = () => {
         <InputField datapoint={"Postleitzahl"} type="text" inputData={i => setData({...data, zip: i})} />
         <InputField datapoint={"Geburtsdatum"} type="text" inputData={i => setData({...data, birth_date: i})} />
 
+        <div className='w-full inline-block'>
+          <input type='checkbox' className="float-left mt-5 w-[18px] h-[18px] outline-none border border-gray-200 rounded-none" onChange={() => setData({...data, checked: !data.checked})} />
+          <p className='w-[calc(100%-28px)] float-right mt-4 font-medium'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
+        </div>
         <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-2 text-white px-5 py-2 text-xl font-semibold mt-4' value="Jetzt Mitglied werden" />
-      </form>
+        {completeData && <p className='italic text-gray-700 mt-3'>Formular nicht vollständig ausgefüllt</p>}
+      </form> :
+      <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] mb-10'>
+        Vielen Dank für deinen Mitgliedsantrag! Dieser wird nun bearbeitet und wir melden uns innerhalb weniger Tage bei dir.
+      </div>
+      }
       <Footer />
     </div>
   )
