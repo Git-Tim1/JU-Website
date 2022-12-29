@@ -1,12 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Position from '../components/position'
-import { positionData } from '../data/position_data'
+import PositionContext from '../context/positionContext'
+
 
 const Positions = () => {
+  const positionData = useContext(PositionContext)
+
   useEffect(() => {
     document.title = "Positionen - Junge Union Kirchheim"
+
+    console.log(positionData)
+
   }, []);
   return (
     <div>
