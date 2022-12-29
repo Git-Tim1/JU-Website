@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { BsInstagram, BsFacebook } from 'react-icons/bs'
 
 const Footer = ({}) => {
+
   return (
     <footer className='w-full h-44 3xs:h-36 sm:h-24 bg-accent-blue-3 text-white bottom-0 overflow-hidden text-xs'>
       <div className='min-h-[100vh] max-w-[60rem] w-[90%] mx-auto uppercase'>

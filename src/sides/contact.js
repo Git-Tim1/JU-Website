@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Footer from '../components/footer'
 import Header from '../components/header'
 import InputField from '../components/input_field'
 
@@ -11,14 +12,30 @@ const Contact = () => {
   }, []);
 
   useEffect(() => {
-    console.log(data)
+    console.log(JSON.stringify(data))
   }, [data]);
+
+  const submitData = () => {
+
+    let formdata = new FormData()
+    for ( var key in data ) {
+      key != "checked" && formdata.append(key, data[key]);
+   }
+    console.log(formdata)
+    fetch("https://api.wrire.com/partner/ju-kirchheim/form", {
+      method: "POST",
+      content: formdata
+    }).then((r) => console.log(r))
+
+  }
+
 
   const handleSubmit = () => {
     console.log(data)
     if (data.name !== "" && data.e_mail !== "" && data.message !== "" && data.checked !== false){
-      console.log("submit")
+      submitData()
     } else {
+      console.log("Date complete")
       setCompleteData(true)
     }
   }
@@ -28,7 +45,7 @@ const Contact = () => {
       <Header />
       <form className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4 block'>
         <h1 className='font-bold text-xl sm:text-2xl mt-6 inline-block'>Kontakt</h1>
-        <p className='mt-3'>Hier Text einfügen, in dem beschrieben wird wieso man euch kontaktieren sollte und dass ihr für Feedback, Anregungen und Fragen offen seid.</p>
+        <p className='mt-3'>Dich stört in deiner Gemeinde etwas? Du willst dich für eine Veranstaltung anmelden oder hast sogar Interesse an einer Mitgliedschaft? Dein schreib uns über unser Kontaktformular!</p>
         
         {completeData && <p className='font-semibold mt-2 text-lg text-red-600'>Formular nicht vollständig ausgefüllt</p>}
         
@@ -38,7 +55,7 @@ const Contact = () => {
         <textarea className='
         w-full mt-1 border border-gray-10 
         bg-white p-3 
-        focus:outline-none focus:border-accent-blue-2' 
+        focus:outline-none focus:border-accent-blue-2 min-h-[150px]'
         onChange={inputDataValue => setData({...data, message: inputDataValue.target.value})}
 
         />
@@ -46,9 +63,10 @@ const Contact = () => {
           <input type='checkbox' className="float-left mt-3 w-[18px] h-[18px] outline-none border border-gray-200 rounded-none" onChange={() => setData({...data, checked: !data.checked})} />
           <p className='w-[calc(100%-25px)] float-right mt-2 font-medium'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
         </div>
-        <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-3 text-white px-4 py-1.5 text-lg font-semibold mt-2' value="Senden" />
+        <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-3 text-white px-4 py-1.5 text-lg font-semibold mt-2 mb-4' value="Senden" />
         
       </form>
+      <Footer />
     </div>
   )
 }

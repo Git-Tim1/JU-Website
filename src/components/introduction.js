@@ -9,15 +9,12 @@ const Introduction = () => {
           <p className='text-2xl font-bold rounded-sm'>Herzlich Willkommen bei der JU Kirchheim</p>
           
           <p className='text-lg w-full mt-3 text-justify'>
-              Hier Vorstellung, Begrüßung und persönliche Worte einfügen. 
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
-              diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-              aliquyam erat, sed diam voluptua. At vero eos et accusam et 
-              justo duo dolores et ea rebum. Stet clita kasd gubergren, no 
-              sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
-              ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam 
-              erat, sed diam voluptua. 
+          Liebe Besucherinnen und Besucher,
+          herzlich Willkommen auf der Internetseite der Jungen Union Kirchheim. Wir sind die Jugendorganisation der CDU für Kirchheim, Ohmden, Holzmaden, Weilheim, Neidlingen, Lenningen, Erkenbrechtsweiler, Owen, Dettingen und Bissingen.
+          Wir sehen uns als Anwalt für kommende Generationen und fordern eine konsequente generationengerechte Politik. Wir stehen ein für unsere Demokratie, unseren Rechts- und Sozialstaat, unsere Freiheit und die Interessen unserer jungen Generation. Wir müssen heute die richtigen Entscheidungen treffen, um morgen in Frieden, Wohlstand und Sicherheit leben zu können.  
+          Bei regelmäßigen Sitzungen, Veranstaltungen, Diskussionsrunden und Debatten lernst Du uns und hin und wieder auch unsere Bundestags- und Landtagsabgeordneten, viele Bürgermeister, aber auch Kreis– und Regionalräte in lockerer Atmosphäre kennen.  
+          Und noch was: Party ist bei uns ein fester Bestandteil.
+          Interesse? Dann komm doch mal vorbei!
           </p>
           <p className='text-lg float-right italic mt-0'>
               - Giancarlo Crescente, Vorsitzender
@@ -37,15 +34,12 @@ const Introduction = () => {
         className='w-[35%] sm:w-[30%] md:w-[25%] h-auto float-right my-3 ml-4 hidden xxs:block' />
         
         <p className='text-md sm:text-lg w-auto md:w-[72%] mt-3 md:float-left text-justify'>
-            Hier Vorstellung, Begrüßung und persönliche Worte einfügen. 
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
-            diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-            aliquyam erat, sed diam voluptua. At vero eos et accusam et 
-            justo duo dolores et ea rebum. Stet clita kasd gubergren, no 
-            sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
-            ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam 
-            erat, sed diam voluptua. 
+          Liebe Besucherinnen und Besucher,
+          herzlich Willkommen auf der Internetseite der Jungen Union Kirchheim. Wir sind die Jugendorganisation der CDU für Kirchheim, Ohmden, Holzmaden, Weilheim, Neidlingen, Lenningen, Erkenbrechtsweiler, Owen, Dettingen und Bissingen.
+          Wir sehen uns als Anwalt für kommende Generationen und fordern eine konsequente generationengerechte Politik. Wir stehen ein für unsere Demokratie, unseren Rechts- und Sozialstaat, unsere Freiheit und die Interessen unserer jungen Generation. Wir müssen heute die richtigen Entscheidungen treffen, um morgen in Frieden, Wohlstand und Sicherheit leben zu können.  
+          Bei regelmäßigen Sitzungen, Veranstaltungen, Diskussionsrunden und Debatten lernst Du uns und hin und wieder auch unsere Bundestags- und Landtagsabgeordneten, viele Bürgermeister, aber auch Kreis– und Regionalräte in lockerer Atmosphäre kennen.  
+          Und noch was: Party ist bei uns ein fester Bestandteil.
+          Interesse? Dann komm doch mal vorbei!
         </p>
 
         <img src="https://media.discordapp.net/attachments/804256706514649159/1009568271126757487/HJR-5D4-02240-768x512.jpeg"

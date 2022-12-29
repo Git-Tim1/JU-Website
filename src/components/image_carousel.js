@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill, BsCircleFill } from 'react-icons/bs'
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
-import { articleData } from '../data/articleData'
 import { Link } from 'react-router-dom'
 
 const ImageCarousel = () => {
     let slideInterval;
     let intervalTime = 10000;
     let autoscroll = true;
+
     const [currentSlide, setCurrentSlide] = useState(0)
+    const [articleData, setArticleData] = useState([])
 
     const autoSlide = () => {
         slideInterval = setInterval(() => setCurrentSlide(currentSlide + 1), intervalTime)    
     }
 
     useEffect(() => {
-        fetch('https://api.wrire.com/partner/admin?page=0', { // fetch data from backend server
+        fetch('https://api.wrire.com/partner/ju-kirchheim?page=0', { // fetch data from backend server
             method: 'GET',
         }).then((response) =>  response.json().then((data)=>{
             console.log(data)
+            setArticleData(data)
         }))
     }, [])
 
@@ -65,12 +67,12 @@ const ImageCarousel = () => {
                     <div className={index === currentSlide ? "slide current" : "slide"} key={index}>
                         {index === currentSlide && (
                             <>
-                            <Link to={slide.link}>
-                                <img src={slide.image} alt="slide-img" 
+                            <Link to={`/article/${slide.id}`}>
+                                <img src={`https://api.wrire.com${slide.thumbnail}`} alt="slide-img" 
                                 className='z-1 h-[320px] sm:h-[380px] md:h-[440px] w-full object-cover' 
                                 />
                                 <p className=
-                                'font-bold absolute bg-accent-blue-3 text-white w-52 
+                                'font-bold absolute bg-accent-blue-3 text-white w-52
                                 px-3 py-1
                                 left-5 bottom-8 text-lg 
                                 xxs:w-72 xxs:left-8

@@ -12,6 +12,8 @@ import Mitmachen from './sides/mitmachen';
 import Person from './sides/person';
 import ViewPosition from './sides/view_position';
 import Donate from './sides/donate';
+import Imprint from './sides/imprint';
+
 
 const App = () => {
   return (
@@ -31,9 +33,12 @@ const App = () => {
             <Route path="/personen/">
               <Route path=':personID' element={<Person />} />
             </Route>
-            <Route path="/article" element={<ViewArticle />} />
+            <Route path="/article/">
+              <Route path=":articleID" element={<ViewArticle />} />
+            </Route>
             <Route path="/contact" element={<Contact />} />
             <Route path="/spenden" element={<Donate />} />
+            <Route path="/impressum" element={<Imprint />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
       </Router>

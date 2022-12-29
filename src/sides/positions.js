@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Footer from '../components/footer'
 import Header from '../components/header'
 import Position from '../components/position'
 import { positionData } from '../data/position_data'
@@ -26,8 +27,9 @@ const Positions = () => {
                 })
             }
       </div>
-
+      <p className='mb-6'></p>
     </div>
+    <Footer />
   </div>
   )
 }

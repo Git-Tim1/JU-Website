@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Header from '../components/header'
 import { vorstand_data } from '../data/vorstand_data'
 import VorstandMember from '../components/vorstand_member'
+import Footer from '../components/footer'
 
 const Vorstand = () => {
   useEffect(() => {
@@ -16,7 +17,9 @@ const Vorstand = () => {
         {vorstand_data.map((member, index) => {
           return(<VorstandMember name={member.name} role={member.role} image={member.image} occupation={member.occupation} twitter={member.twitter} instagram={member.instagram} e_mail={member.e_mail} index={index} introduction={member.introduction} />)
         })}
+        <p className='mb-5'></p>
       </div>
+      <Footer />
     </div>
   )
 }

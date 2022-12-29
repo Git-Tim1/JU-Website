@@ -18,7 +18,7 @@ const Person = () => {
         <div>
             <Header />
             <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[7rem] pb-4 block'>
-                <div className='w-full h-full inline-block'>
+                <div className='w-full h-full inline-block mb-5'>
                     <img src={vorstand_data[id].image} className='
                     sm:hidden md:block
                     aspect-4/3 sm:aspect-3/4 
@@ -36,11 +36,10 @@ const Person = () => {
                         ' />
 
                         <p className='xxs:text-lg text-base mt-1 sm:mt-2 whitespace-pre-line text-justify w-full'>{vorstand_data[id].introduction}</p>
-
-                        
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

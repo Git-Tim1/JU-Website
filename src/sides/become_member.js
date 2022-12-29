@@ -30,14 +30,22 @@ const BecomeMember = () => {
       <form className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] mb-10'>
         <h1 className='font-bold text-xl sm:text-2xl mt-6 inline-block'>Mitglied werden</h1>
 
-        <p className='mt-3'>
-          Cool, dass du Interesse hast, bei uns Mitglied zu werden und somit unsere Heimat mitzugestalten. 
+        <p className='mt-3 text-justify text-[17px]'>
+          Du hast Interesse an der Arbeit der Jungen Union und bist zwischen 14 und 35 Jahre alt? Dann schreibe uns oder komm zu einem unserer nächsten Treffen! Denn: In der Jungen Union aktiv sein heißt, die eigene Zukunft selbst in die Hand zu nehmen. Wir freuen uns auf Dich, denn gemeinsam macht Politik mehr Spaß.
+          Warum aktiv werden? Hier findest du vier gute Gründe!
+        
+            
+          <h2 className='text-lg font-bold mt-2'>VOR ORT</h2>
+            Der Jugendclub steht vor dem Aus, die Sportanlage muss dringend renoviert oder das Nachtbusnetz sollte ausgebaut werden? Die JU setzt sich dort ein, wo sie gebraucht wird. Als einzige politische Jugendorganisation in Deutschland ist die Junge Union flächendeckend vertreten und stellt dabei die größte Jugendorganisation in Kirchheim dar. Der Mitgliedsbeitrag beträgt hierbei 12€ im Jahr.
 
-          Wir, die Junge Union Stadtverband Kirchheim, sind ein junger und aktiver Verband, welcher die Interessen der junge Menschen vertritt. 
+          <h2 className='text-lg font-bold mt-2'>GEMEINSCHAFT</h2>
+            Mit rund 110.000 Mitgliedern ist die Junge Union eine starke Gemeinschaft. Wir diskutieren über Politik und streiten um die besten Lösungen. Genauso gehören jedoch ein Kinoabend, eine Party oder ein Stand auf dem Straßenfest zu den Aktivitäten der JU.
 
-          Wenn du Lust auf Politik hast und Spaß haben willst, bist du bei uns genau richtig! Dann heißt es jetzt nur noch Mitglied werden!
+          <h2 className='text-lg font-bold mt-2'>VERANSTALTUNGEN</h2>
+            Von Podiumsdiskussionen über Straßenaktionen bis zu gemeinsamen Freizeit-Aktivitäten: Bei der Jungen Union ist immer viel los!
 
-          Mitglied der JU kann werden, wer das 14. Lebensjahr vollendet hat, mit 35 ented die Mitgliedschaft der JU automatisch.
+          <h2 className='text-lg font-bold mt-2'>NETZWERK</h2>
+            In der Jungen Union aktiv sein heißt auch, neue Leute kennen zu lernen. Bei gemeinsamen Projekten, der Arbeit in Ausschüssen oder bei gemeinsamen Fahrten bilden sich oft Freundschaften, die weit über die Junge Union heraus reichen.
         </p>
 
         <label className='font-semibold text-lg mt-3 inline-block'>Anrede</label>
