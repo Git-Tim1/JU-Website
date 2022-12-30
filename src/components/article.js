@@ -12,6 +12,9 @@ const ArticleComponent = ({image, title, content, link, unixTime, author}) => {
     var month = dateVar.getMonth()
     var year = dateVar.getFullYear()
 
+    if (day < 10) {day = "0" + day.toString()}
+    if (month < 10) {month = "0" + month.toString()}
+
     setDate(day + '.' + month + '.' + year)
   
 }, [])

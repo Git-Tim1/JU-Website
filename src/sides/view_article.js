@@ -36,6 +36,9 @@ const ViewArticle = () => {
     var month = dateVar.getMonth()
     var year = dateVar.getFullYear()
 
+    if (day < 10) {day = "0" + day.toString()}
+    if (month < 10) {month = "0" + month.toString()}
+
     setDate(day + '.' + month + '.' + year)
   
   }, [articleData])
@@ -46,7 +49,10 @@ const ViewArticle = () => {
       <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4 block'>
         <div className='mt-[1.5rem] block w-full h-auto float-left'>
           <img className='aspect-video lg:max-h-[400px] lg:aspect-auto object-cover w-full' src={`https://api.wrire.com${articleData.thumbnail}`} />
-          <h2 className='mt-5 mb-2 leading-3 text-lg font-medium italic text-gray-500'>{date} </h2>
+          <div className='mt-3 mb-1 bg-accent-blue-1 w-auto h-auto inline-block px-2 py-2'>
+            <h2 className='leading-3 text-lg font-bold text-white'>{date} </h2>
+          </div>
+          
           <h1 className='text-2xl sm:text-3xl font-extrabold'>{articleData.title}</h1>
 
           <p className='text-md sm:text-lg mt-2 mb-10 sm:text-justify whitespace-pre-line'>{ articleData.content }</p>
