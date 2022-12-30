@@ -14,6 +14,15 @@ const ViewPosition = () => {
     const [date, setDate] = useState("")
     const [content, setContent] = useState("")
 
+    function parseDateTime(datetime) {
+        let z = (num, places) => String(num).padStart(places, '0')
+        let a = datetime.split("T")[0].split("-")
+        let y = parseInt(a[0])
+        let m = parseInt(a[1])
+        let d = parseInt(a[2])+1
+        return `${z(d, 2)}.${z(m, 2)}.${z(y, 4)}`
+    }
+
     useEffect(() => {
         console.log(positionData)
         let newID = positionID.split("&")[1]
@@ -22,23 +31,12 @@ const ViewPosition = () => {
 
         fetch('https://api.wrire.com/partner/ju-kirchheim/Positionen', { // fetch data from backend server
             method: 'GET',
-        }).then((response) =>  response.json().then((data)=>{ console.log(data[newID])
-            setContent(decodeURI(data[newID].content)); setPositionData(data[newID])
+        }).then((response) =>  response.json().then((data)=>{ 
+            console.log(data[newID])
+            setContent(decodeURI(data[newID].content));
+            setDate(parseDateTime(data[newID].date_time))
+            setPositionData(data[newID])
         }))
-
-
-        /*document.title = positionData[newID].topic + " - Junge Union Kirchheim"
-
-        let unixTime = positionData[newID].date_time
-
-        let unix_timestamp = unixTime
-        var dateVar = new Date(unix_timestamp * 1000);
-
-        var day = dateVar.getDay()
-        var month = dateVar.getMonth()
-        var year = dateVar.getFullYear()
-
-        setDate(day + '.' + month + '.' + year)*/
     }, [])
     
 
@@ -48,7 +46,7 @@ const ViewPosition = () => {
             <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4 block'>
                 <div className='mt-[1.5rem] block w-full h-auto float-left'>
                     <img className='aspect-video lg:max-h-[400px] lg:aspect-auto lg:object-cover w-full' src={positionData.picture} />
-                    <h2 className='mt-5 mb-2 leading-3 text-lg font-medium italic text-gray-500'>Stand: { positionData.date_time }</h2>
+                    <h2 className='mt-5 mb-2 leading-3 text-lg font-medium italic text-gray-500'>Stand: { date }</h2>
                     <h1 className='text-3xl font-bold'>{ positionData.title}</h1>
 
                     <p className='text-lg mt-2 text-justify whitespace-pre-line'>{ content }</p>

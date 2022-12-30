@@ -42,7 +42,7 @@ const ViewArticle = () => {
       <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4 block'>
         <div className='mt-[1.5rem] block w-full h-auto float-left'>
           <img className='aspect-video lg:max-h-[400px] lg:aspect-auto object-cover w-full' src={`https://api.wrire.com${articleData.thumbnail}`} />
-          <h2 className='mt-5 mb-2 leading-3 text-lg font-medium italic text-gray-500'>Stand: {date} </h2>
+          <h2 className='mt-5 mb-2 leading-3 text-lg font-medium italic text-gray-500'>{date} </h2>
           <h1 className='text-3xl font-bold'>{articleData.title}</h1>
 
           <p className='text-lg mt-2 mb-10 text-justify whitespace-pre-line'>{ articleData.content }</p>
