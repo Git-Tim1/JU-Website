@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
 import Header from '../components/header'
 import { articleData } from '../data/articleData.js'
 import ArticleComponent from '../components/article'
@@ -7,6 +7,10 @@ import Footer from '../components/footer'
 const News = () => {
 
   const [articleData, setArticleData] = useState([])
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   useEffect(() => {
     document.title = "Aktuelles - Junge Union Kirchheim"

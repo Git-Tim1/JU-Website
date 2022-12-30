@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -13,6 +13,10 @@ const Person = () => {
     useEffect(() => {
         setID(personID.split("+")[1])
     }, [])
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
 
     return (
         <div>

@@ -1,19 +1,34 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import InputField from '../components/input_field'
+import swal from 'sweetalert';
+
 
 const Contact = () => {
   const [data, setData] = useState({name: "", e_mail: "", message: "", checked: false})
   const [completeData, setCompleteData] = useState(false)
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     document.title = "Kontakt - Junge Union Kirchheim"
   }, []);
 
   useEffect(() => {
-    console.log(JSON.stringify(data))
-  }, [data]);
+    if (completeData == true){
+      swal({
+        icon: "error",
+        title: "Formular vollständig aufüllen"
+      })
+    }
+  }, [completeData])
+  
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   const submitData = () => {
 
@@ -22,11 +37,25 @@ const Contact = () => {
       key != "checked" && formdata.append(key, data[key]);
    }
     console.log(formdata)
-    fetch("https://api.wrire.com/partner/ju-kirchheim/form", {
-      method: "POST",
-      body: formdata
-    }).then((r) => console.log(r))
-
+    try{
+      fetch("https://api.wrire.com/partner/ju-kirchheim/form", {
+        method: "POST",
+        body: formdata
+      }).then((r) => console.log(swal({
+        title: "Vielen Dank",
+        text: "Wir haben deine Anfrage erhalten und werden dir schnellstmöglich antworten",
+        icon: "success",
+        button: "Ok"
+      }).then(e => navigate("/path/to/push"))));
+    } catch (e) {
+      console.log("Error")
+      swal({
+        title: "Error",
+        text: "Etwas ist Schief gelaufen, versuche später noch einmal",
+        icon: "error"
+    }
+      )
+    }
   }
 
 
@@ -62,7 +91,6 @@ const Contact = () => {
           <p className='w-[calc(100%-25px)] float-right mt-2 font-medium'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
         </div>
         <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-3 text-white px-4 py-1.5 text-lg font-semibold mt-2 mb-4' value="Senden" />
-        {completeData && <p className='italic text-gray-700 mt-3'>Formular nicht vollständig ausgefüllt</p>}
       </form>
       <Footer />
     </div>

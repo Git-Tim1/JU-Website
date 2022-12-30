@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import ImageCarousel from '../components/image_carousel'
@@ -11,6 +11,10 @@ const LandingPage = () => {
   useEffect(() => {
     document.title = "Junge Union Kirchheim"
   }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
   return (
     <div>
       <Header />

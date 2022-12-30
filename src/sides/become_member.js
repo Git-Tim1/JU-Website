@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
 import Header from '../components/header'
-import Select from 'react-select'
 import InputField from '../components/input_field'
 import Footer from '../components/footer'
-import Form from 'react-bootstrap/Form'
+import swal from 'sweetalert';
+
 
 
 const BecomeMember = () => {
@@ -11,12 +11,25 @@ const BecomeMember = () => {
     document.title = "Mitglied werden - Junge Union Kirchheim"
   }, []);
 
-  
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
+
   const [send, setSend] = useState(false)
   const [data, setData] = useState({sex: "male", vorname: "", nachname: "", e_mail: "", street_and_number: "", place_of_residence:"", zip:"", birth_date: "", bank_name: "",  iban: "", bic: "", checked: false})
   const [completeData, setCompleteData] = useState(false)
 
 
+
+  useEffect(() => {
+    if (completeData == true){
+      swal({
+        icon: "error",
+        title: "Formular vollständig aufüllen"
+      })
+    }
+  }, [completeData])
+  
   useEffect(() => {
     console.log(data)
   }, [data])

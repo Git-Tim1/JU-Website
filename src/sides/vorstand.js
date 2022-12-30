@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import Header from '../components/header'
 import { vorstand_data } from '../data/vorstand_data'
 import VorstandMember from '../components/vorstand_member'
@@ -8,6 +8,10 @@ const Vorstand = () => {
   useEffect(() => {
     document.title = "Ortsvorstand - Junge Union Kirchheim"
   }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   return (
     <div>

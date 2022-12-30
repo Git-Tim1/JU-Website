@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react'
+import React, {useState, useEffect, useLayoutEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Footer from '../components/footer'
 import Header from '../components/header'
@@ -22,6 +22,10 @@ const ViewPosition = () => {
         let d = parseInt(a[2])+1
         return `${z(d, 2)}.${z(m, 2)}.${z(y, 4)}`
     }
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
 
     useEffect(() => {
         console.log(positionData)

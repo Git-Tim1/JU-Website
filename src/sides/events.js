@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
 import Header from '../components/header'
 import Event from '../components/event'
 import Footer from '../components/footer'
 
 const Events = () => {
   const [eventData, setEventData] = useState(null)
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   useEffect(() => {
     document.title = "Veranstaltungen - Junge Union Kirchheim"

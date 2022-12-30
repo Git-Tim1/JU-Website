@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Header from '../components/header'
 import * as ReactBootStrap from 'react-bootstrap'
@@ -10,6 +10,10 @@ const ViewArticle = () => {
   const [date, setDate] = useState(null)
 
   let { articleID } = useParams()
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   useEffect(() => {
     document.title = "Junge Union Kirchheim"

@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useLayoutEffect} from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 
 const Imprint = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
   let text1 = 'Dienstanbieter dieser Seite ist die \n \
               Junge Union – Stadtverband Kirchheim unter Teck \n \
               Adresse auf Anfrage: kontakt@ju-kirchheim.de \n \n \

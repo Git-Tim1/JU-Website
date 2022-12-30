@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useLayoutEffect } from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Position from '../components/position'
@@ -14,6 +14,10 @@ const Positions = () => {
     console.log(positionData)
 
   }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
   return (
     <div>
       <Header />
