@@ -24,7 +24,7 @@ const Contact = () => {
     console.log(formdata)
     fetch("https://api.wrire.com/partner/ju-kirchheim/form", {
       method: "POST",
-      content: formdata
+      body: formdata
     }).then((r) => console.log(r))
 
   }
@@ -44,8 +44,8 @@ const Contact = () => {
     <div>
       <Header />
       <form className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4 block'>
-        <h1 className='font-bold text-xl sm:text-2xl mt-6 inline-block'>Kontakt</h1>
-        <p className='mt-3'>Dich stört in deiner Gemeinde etwas? Du willst dich für eine Veranstaltung anmelden oder hast sogar Interesse an einer Mitgliedschaft? Dein schreib uns über unser Kontaktformular!</p>
+        <h1 className='font-extrabold text-2xl sm:text-3xl mt-6 inline-block'>Kontakt</h1>
+        <p className='mt-3 text-md sm:text-[17px]'>Dich stört in deiner Gemeinde etwas? Du willst dich für eine Veranstaltung anmelden oder hast sogar Interesse an einer Mitgliedschaft? Dein schreib uns über unser Kontaktformular!</p>
         
         <InputField datapoint='Name' type='text' inputData={inputData => {setData({...data, name: inputData})}} />
         <InputField datapoint='E-Mail' type='e-mail' inputData={inputData => {setData({...data, e_mail: inputData})}} />

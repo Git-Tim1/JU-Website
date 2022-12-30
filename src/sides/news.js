@@ -22,7 +22,7 @@ const News = () => {
     <div>
       <Header />
       <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem]'>
-        <h1 className='font-bold text-xl sm:text-2xl mt-6 inline-block'>Aktuelles</h1>
+        <h1 className='font-extrabold text-2xl sm:text-3xl mt-6 inline-block'>Aktuelles</h1>
 
         {articleData.map((article, index) => {
           console.log(article)

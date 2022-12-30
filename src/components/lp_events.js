@@ -18,7 +18,7 @@ const LP_Events = () => {
   
   return (
     <div className='mt-12 block w-full h-auto float-left'>
-        <h1 className='font-bold text-xl sm:text-2xl'>Termine</h1>
+        <h1 className='font-extrabold text-xl sm:text-2xl'>Termine</h1>
         {eventData.map((event, index) => {
         return(
             <>

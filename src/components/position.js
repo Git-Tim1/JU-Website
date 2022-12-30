@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useLayoutEffect} from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -7,6 +7,11 @@ const Position = ({ topic, image, lp, index }) => {
     useEffect(() => {
       setLink(encodeURI(topic) + "&" + index)
     }, [])
+
+    useLayoutEffect(() => {
+      window.scrollTo(0, 0)
+    });
+  
     
     return (        
         <a href={"/position/" + link} className='w-full inline-block relative mt-1 opacity-90 hover:opacity-100 drop-shadow hover:drop-shadow-lg'>

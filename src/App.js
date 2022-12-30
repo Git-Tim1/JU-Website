@@ -9,7 +9,6 @@ import Positions from './sides/positions'
 import BecomeMember from './sides/become_member'
 import ViewArticle from './sides/view_article'
 import Contact from './sides/contact'
-import Mitmachen from './sides/mitmachen';
 import Person from './sides/person';
 import ViewPosition from './sides/view_position';
 import Donate from './sides/donate';
@@ -35,7 +34,6 @@ const App = () => {
           <Router>
             <Routes>
               <Route path="/home" element={<LandingPage />} /> 
-              <Route path="/mitmachen" element={<Mitmachen />} />
               <Route path="/mitglied-werden" element={<BecomeMember />} />
               <Route path="/events" element={<Events />} />
               <Route path="/vorstand" element={<Vorstand />} />

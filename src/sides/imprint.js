@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/footer'
 import Header from '../components/header'
 
 const Imprint = () => {
@@ -17,16 +18,17 @@ const Imprint = () => {
       <Header />
       <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem]'>
         <div className='mt-[1.5rem] block w-full h-auto float-left'>
-          <h1 className='font-bold text-xl sm:text-2xl'>Impressum</h1>
+          <h1 className='font-extrabold text-2xl sm:text-3xl'>Impressum</h1>
           <p className='text-[17px] mt-2 text-justify whitespace-pre-line'>
             {text1}
           </p>
           <h2 className='font-bold  text-md sm:text-xl mt-4'>Bildnachweis</h2>
-          <p className='text-[17px] mt-2 text-justify whitespace-pre-line'>
+          <p className='text-[17px] mt-2 mb-8 text-justify whitespace-pre-line'>
             {text2}
           </p>
         </div>
       </div>
+      <Footer />
     </div>
 
   )

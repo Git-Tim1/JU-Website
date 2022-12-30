@@ -47,7 +47,7 @@ const ViewPosition = () => {
                 <div className='mt-[1.5rem] block w-full h-auto float-left'>
                     <img className='aspect-video lg:max-h-[400px] lg:aspect-auto lg:object-cover w-full' src={positionData.picture} />
                     <h2 className='mt-5 mb-2 leading-3 text-lg font-medium italic text-gray-500'>Stand: { date }</h2>
-                    <h1 className='text-3xl font-bold'>{ positionData.title}</h1>
+                    <h1 className='text-2xl sm:text-3xl font-extrabold'>{ positionData.title}</h1>
 
                     <p className='text-lg mt-2 text-justify whitespace-pre-line'>{ content }</p>
 

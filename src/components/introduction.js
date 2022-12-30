@@ -6,7 +6,7 @@ const Introduction = () => {
     <div className='mt-10 inline-block w-full h-auto'>
       <div className='hidden md:block w-full h-auto'>
         <div className='float-left w-[70%]'>
-          <p className='text-2xl font-bold rounded-sm'>Herzlich Willkommen bei der JU Kirchheim</p>
+          <p className='text-2xl font-extrabold rounded-sm'>Herzlich Willkommen bei der JU Kirchheim</p>
           
           <p className='text-lg w-full mt-3 text-justify'>
           Liebe Besucherinnen und Besucher,
