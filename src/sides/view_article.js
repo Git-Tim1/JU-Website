@@ -49,7 +49,7 @@ const ViewArticle = () => {
           <h2 className='mt-5 mb-2 leading-3 text-lg font-medium italic text-gray-500'>{date} </h2>
           <h1 className='text-2xl sm:text-3xl font-extrabold'>{articleData.title}</h1>
 
-          <p className='text-lg mt-2 mb-10 text-justify whitespace-pre-line'>{ articleData.content }</p>
+          <p className='text-md sm:text-lg mt-2 mb-10 sm:text-justify whitespace-pre-line'>{ articleData.content }</p>
         </div>
       </div>
       <Footer />

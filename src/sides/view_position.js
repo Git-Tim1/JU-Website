@@ -53,7 +53,7 @@ const ViewPosition = () => {
                     <h2 className='mt-5 mb-2 leading-3 text-lg font-medium italic text-gray-500'>Stand: { date }</h2>
                     <h1 className='text-2xl sm:text-3xl font-extrabold'>{ positionData.title}</h1>
 
-                    <p className='text-lg mt-2 text-justify whitespace-pre-line'>{ content }</p>
+                    <p className='text-md sm:text-[17px] mt-2 sm:text-justify whitespace-pre-line'>{ content }</p>
 
                     <div className='w-full flex justify-center mb-6'><a href={positionData.PDF}  download={"Position_" + positionData.topic} className='py-1.5 px-3 bg-accent-blue-2 text-white text-lg font-bold mt-4 '>Pressemitteilung herunterladen</a></div>
                 </div>

@@ -39,7 +39,7 @@ const Person = () => {
                         w-1/3 float-right ml-4
                         ' />
 
-                        <p className='xxs:text-lg text-base mt-1 sm:mt-2 whitespace-pre-line text-justify w-full'>{vorstand_data[id].introduction}</p>
+                        <p className='xxs:text-lg text-base mt-1 sm:mt-2 whitespace-pre-line sm:text-justify w-full'>{vorstand_data[id].introduction}</p>
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@ const BecomeMember = () => {
       })
     }
   }, [completeData])
-  
+
   useEffect(() => {
     console.log(data)
   }, [data])
@@ -65,7 +65,7 @@ const BecomeMember = () => {
       <form className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] mb-10'>
         <h1 className='font-extrabold text-2xl sm:text-3xl mt-6 inline-block'>Mitglied werden</h1>
 
-        <p className='mt-3 text-justify text-md sm:text-[17px]'>
+        <p className='mt-3 sm:text-justify text-md sm:text-[17px]'>
           Du hast Interesse an der Arbeit der Jungen Union und bist zwischen 14 und 35 Jahre alt? Dann schreibe uns oder komm zu einem unserer nächsten Treffen! Denn: In der Jungen Union aktiv sein heißt, die eigene Zukunft selbst in die Hand zu nehmen. Wir freuen uns auf Dich, denn gemeinsam macht Politik mehr Spaß.
           Warum aktiv werden? Hier findest du vier gute Gründe!
         

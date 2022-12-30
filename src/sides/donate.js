@@ -27,7 +27,7 @@ const Donate = () => {
       <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4'>
         <div className='mt-[1.5rem] block w-full h-auto float-left'>
           <h1 className='font-extrabold text-2xl sm:text-3xl'>Spenden</h1>
-          <p className='text-md sm:text-[17px] mt-2 mb-6 text-justify whitespace-pre-line'>
+          <p className='text-md sm:text-[17px] mt-2 mb-6 sm:text-justify whitespace-pre-line'>
             <p className='mt-1'>{text1}</p>
             <p className='italic'>Hinweis: Parteispenden werden steuerlich privilegiert. Gerne stellen wir Ihnen hierfür eine Spendenbescheinigung aus.</p>
             <h2 className='text-xl font-bold mt-2'>Spendenkonto</h2>
