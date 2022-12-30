@@ -90,7 +90,7 @@ const Contact = () => {
           <input type='checkbox' className="float-left mt-3 w-[18px] h-[18px] outline-none border border-gray-200 rounded-none" onChange={() => setData({...data, checked: !data.checked})} />
           <p className='w-[calc(100%-25px)] float-right mt-2 font-medium'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
         </div>
-        <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-3 text-white px-4 py-1.5 text-lg font-semibold mt-2 mb-4' value="Senden" />
+        <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-2 text-white px-4 py-1.5 text-lg font-semibold mt-2 mb-4' value="Senden" />
       </form>
       <Footer />
     </div>
