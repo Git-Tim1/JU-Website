@@ -28,12 +28,12 @@ const Introduction = () => {
 
 
       <div className='md:hidden'>
-        <p className='text-xl font-bold rounded-sm w-full'>Herzlich Willkommen bei der JU Kirchheim</p>
+        <p className='text-xl font-extrabold rounded-sm w-full'>Herzlich Willkommen bei der JU Kirchheim</p>
         
         <img src="https://media.discordapp.net/attachments/804256706514649159/1009546492664627341/HJR-5D4-02240-768x512_1.jpg"
         className='w-[35%] sm:w-[30%] md:w-[25%] h-auto float-right my-3 ml-4 hidden xxs:block' />
         
-        <p className='text-md sm:text-lg w-auto md:w-[72%] mt-3 md:float-left text-justify'>
+        <p className='text-md sm:text-lg w-auto md:w-[72%] mt-2 sm:mt-3 md:float-left text-justify'>
           Liebe Besucherinnen und Besucher,
           herzlich Willkommen auf der Internetseite der Jungen Union Kirchheim. Wir sind die Jugendorganisation der CDU für Kirchheim, Ohmden, Holzmaden, Weilheim, Neidlingen, Lenningen, Erkenbrechtsweiler, Owen, Dettingen und Bissingen.
           Wir sehen uns als Anwalt für kommende Generationen und fordern eine konsequente generationengerechte Politik. Wir stehen ein für unsere Demokratie, unseren Rechts- und Sozialstaat, unsere Freiheit und die Interessen unserer jungen Generation. Wir müssen heute die richtigen Entscheidungen treffen, um morgen in Frieden, Wohlstand und Sicherheit leben zu können.  
@@ -44,7 +44,7 @@ const Introduction = () => {
 
         <img src="https://media.discordapp.net/attachments/804256706514649159/1009568271126757487/HJR-5D4-02240-768x512.jpeg"
         className='xxs:hidden mt-2' />
-        <p className='text-md sm:text-lg float-left italic mt-1'>
+        <p className='text-md sm:text-lg float-left italic mt-2 sm:mt-1'>
             - Giancarlo Crescente, Vorsitzender
       </p>
         
