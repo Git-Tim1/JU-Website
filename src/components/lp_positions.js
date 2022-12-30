@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useEffect, useContext} from 'react'
 import Position from './position'
-import { positionData } from '../data/position_data'
 import { Link } from 'react-router-dom'
+import PositionContext from '../context/positionContext'
 
 const LP_Positions = () => {
-  return (
+    const positionData = useContext(PositionContext)
+    
+    return (
     <div className='my-12 inline-block w-full h-auto'>
         <h1 className='font-bold text-xl sm:text-2xl'>Positionen</h1>
 
