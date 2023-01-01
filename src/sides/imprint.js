@@ -19,7 +19,7 @@ const Imprint = () => {
   return (
     <div className='h-full'>
       <Header />
-      <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem]'>
+      <div className='min-h-[calc(100vh-256px)] 3xs:min-h-[calc(100vh-214px)] sm:min-h-[calc(100vh-166px)] max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem]'>
         <div className='mt-[1.5rem] block w-full h-auto float-left'>
           <h1 className='font-extrabold text-2xl sm:text-3xl'>Impressum</h1>
           <p className='text-md sm:text-[17px] mt-2 sm:text-justify whitespace-pre-line'>

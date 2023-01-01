@@ -25,7 +25,7 @@ const News = () => {
   return (
     <div>
       <Header />
-      <div className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem]'>
+      <div className='min-h-[calc(100vh-256px)] 3xs:min-h-[calc(100vh-214px)] sm:min-h-[calc(100vh-166px)] max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem]'>
         <h1 className='font-extrabold text-2xl sm:text-3xl mt-6 inline-block'>Aktuelles</h1>
 
         {articleData.map((article, index) => {

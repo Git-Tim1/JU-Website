@@ -17,7 +17,7 @@ const Footer = ({}) => {
           <a href="https://de-de.facebook.com/JUKirchheim/" className='float-left mr-3'><BsFacebook size={ 28 } /></a>
         </div>
         <div className='ml-0 mr-12 mt-2 xs:mt-4  sm:mr-0 float-left'>
-            <Link to='/impressum'><p className='hover:underline'>Datenschutzhinweise</p></Link>
+            <Link to='/datenschutzhinweise'><p className='hover:underline'>Datenschutzhinweise</p></Link>
             <Link to='/impressum'><p className='hover:underline my-[3px]'>Impressum</p></Link>
             <p className=''>© 2023 JU Kirchheim</p>
         </div>

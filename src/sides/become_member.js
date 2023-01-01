@@ -62,7 +62,7 @@ const BecomeMember = () => {
     <div>
       <Header />
       
-      <form className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] mb-10'>
+      <form className='min-h-[calc(100vh-256px)] 3xs:min-h-[calc(100vh-214px)] sm:min-h-[calc(100vh-166px)] max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] mb-10'>
         <h1 className='font-extrabold text-2xl sm:text-3xl mt-6 inline-block'>Mitglied werden</h1>
 
         <p className='mt-3 sm:text-justify text-md sm:text-[17px]'>

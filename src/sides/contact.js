@@ -72,7 +72,7 @@ const Contact = () => {
   return (
     <div>
       <Header />
-      <form className='h-full max-w-[60rem] w-[90%] mx-auto z-1 mt-[4.5rem] pb-4 block'>
+      <form className='max-w-[60rem] w-[90%] mx-auto min-h-[calc(100vh-256px)] 3xs:min-h-[calc(100vh-214px)] sm:min-h-[calc(100vh-166px)] z-1 mt-[4.5rem] pb-4 block'>
         <h1 className='font-extrabold text-2xl sm:text-3xl mt-6 inline-block'>Kontakt</h1>
         <p className='mt-3 text-md sm:text-[17px]'>Dich stört in deiner Gemeinde etwas? Du willst dich für eine Veranstaltung anmelden oder hast sogar Interesse an einer Mitgliedschaft? Dein schreib uns über unser Kontaktformular!</p>
         
@@ -90,7 +90,7 @@ const Contact = () => {
           <input type='checkbox' className="float-left mt-3 w-[18px] h-[18px] outline-none border border-gray-200 rounded-none" onChange={() => setData({...data, checked: !data.checked})} />
           <p className='w-[calc(100%-25px)] float-right mt-2 font-medium'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
         </div>
-        <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-2 text-white px-4 py-1.5 text-lg font-semibold mt-2 mb-4' value="Senden" />
+        <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-2 text-white px-4 py-1.5 text-lg font-semibold mt-2' value="Senden" />
       </form>
       <Footer />
     </div>

@@ -14,6 +14,7 @@ import ViewPosition from './sides/view_position';
 import Donate from './sides/donate';
 import Imprint from './sides/imprint';
 import PositionContext from './context/positionContext'
+import Datenschutzhinweise from './sides/datenschutzhinweise';
 
 const App = () => {
   const [positionData, setPositionData] = useState([])
@@ -51,6 +52,7 @@ const App = () => {
               <Route path="/contact" element={<Contact />} />
               <Route path="/spenden" element={<Donate />} />
               <Route path="/impressum" element={<Imprint />} />
+              <Route path="/datenschutzhinweise" element={<Datenschutzhinweise />} />
               <Route path="*" element={<Navigate to="/home" replace />} />
             </Routes>
         </Router>
