@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useLayoutEffect} from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 
 const Datenschutzhinweise = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
   return (
     <div className='h-full'>
         <Header />
