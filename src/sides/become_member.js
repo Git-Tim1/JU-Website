@@ -100,7 +100,7 @@ const BecomeMember = () => {
         <InputField datapoint={"Geburtsdatum"} type="text" inputData={i => setData({...data, birth_date: i})} />
         
         <div className='w-full inline-block'>
-          <input type='checkbox' className="float-left mt-5 w-[18px] h-[18px] outline-none border border-gray-200 rounded-none" onChange={() => setData({...data, checked: !data.checked})} />
+          <input type='checkbox' className="float-left mt-5 w-[18px] h-[18px] outline-none border border-gray-200 rounded-none" onChange={e => {e.preventDefault(); setData({...data, checked: !data.checked})}} />
           <p className='w-[calc(100%-28px)] float-right mt-4 font-medium'>Mit der Nutzung dieses Formulars erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch diese Webseite einverstanden.</p>
         </div>
         <input type="submit" onClick={e => {e.preventDefault(); handleSubmit()}} className='cursor-pointer bg-accent-blue-2 text-white px-5 py-2 text-xl font-semibold mt-4' value="Jetzt Mitglied werden" />
