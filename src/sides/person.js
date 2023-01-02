@@ -2,16 +2,32 @@ import React, { useEffect, useState, useLayoutEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import { vorstand_data } from '../data/vorstand_data'
 
 const Person = () => {
     let navigate = useNavigate()
     let { personID } = useParams()
     
     let [id, setID] = useState(0)
+    const [vorstand_data, setVorstandData] = useState([{
+        name: '',
+        role: '',
+        image: '',
+        occupation: '',
+        twitter: '',
+        instagram: '',
+        e_mail: '',
+        introduction: ''
+    }])
 
     useEffect(() => {
         setID(personID.split("+")[1])
+
+        try {
+            fetch('https://api.wrire.com/partner/ju-kirchheim/Vorstand',  {
+              method: 'GET',
+            }).then((response) => response.json().then((data) => {setVorstandData(data); console.log(data)}))
+        } catch (error){console.log(error)}
+
     }, [])
 
     useLayoutEffect(() => {
