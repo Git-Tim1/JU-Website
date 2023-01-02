@@ -19,9 +19,9 @@ const VorstandMember = ({ image, name, occupation, role, twitter, instagram, e_m
             <h1 className='font-bold text-xl leading-5 '>{name}</h1>
             <h2 className='mt-1 italic w-full'>{occupation}</h2>
             <div className='bottom-2 absolute'>
-              { instagram && <a className='float-left' href={instagram}><BsInstagram size={25} /></a>}
-              { twitter && <a className='float-left ml-3' href={twitter}><BsTwitter size={25} /></a>}
-              { e_mail && <a className='float-left ml-3' href={`mailto:${e_mail}`}><FiMail size={25} /></a>}
+              { instagram && <a className='float-left mr-3' href={instagram}><BsInstagram size={25} /></a>}
+              { twitter && <a className='float-left mr-3' href={twitter}><BsTwitter size={25} /></a>}
+              { e_mail && <a className='float-left' href={`mailto:${e_mail}`}><FiMail size={25} /></a>}
             </div>
         </div>
     </a>
