@@ -70,16 +70,15 @@ const ImageCarousel = () => {
                                 <img src={`https://api.wrire.com${slide.thumbnail}`} alt="slide-img" 
                                 className='z-1 h-[320px] sm:h-[380px] md:h-[440px] w-full object-cover' 
                                 />
-                                <p className=
-                                'font-bold absolute bg-accent-blue-3 text-white w-52
-                                px-3 py-1
-                                left-5 bottom-8 text-lg 
-                                xxs:w-72 xxs:left-8
-                                xs:w-auto 
-                                sm:left-9 sm:bottom-10 sm:text-xl sm:px-[14px] sm:py-[6px]
-                                lg:left-10 lg:bottom-12 lg:text-2xl 
-                                '
-                                >{slide.short_title}</p>
+                                <div className={`font-bold absolute bg-accent-blue-3 text-white
+                                    overflow-hidden
+                                    px-2 xxs:px-3 py-1
+                                    left-5 bottom-8 text-lg 
+                                    max-w-[80%] xxs:left-8
+                                    sm:left-9 sm:bottom-10  sm:px-[14px] sm:py-[6px]
+                                    lg:left-10 lg:bottom-12`}>
+                                    <p className={` ${slide.short_title.length > 18 ? 'text-[16px]' : 'text-lg'} xxs:text-lg sm:text-xl lg:text-2xl`}>{slide.short_title}</p>
+                                </div>
 
                                 
                             </Link>
