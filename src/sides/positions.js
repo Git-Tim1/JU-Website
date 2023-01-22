@@ -11,8 +11,6 @@ const Positions = () => {
   useEffect(() => {
     document.title = "Positionen - Junge Union Kirchheim"
 
-    console.log(positionData)
-
   }, []);
 
   useLayoutEffect(() => {

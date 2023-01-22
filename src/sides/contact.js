@@ -36,7 +36,6 @@ const Contact = () => {
     for ( var key in data ) {
       key != "checked" && formdata.append(key, data[key]);
    }
-    console.log(formdata)
     try{
       fetch("https://api.wrire.com/partner/ju-kirchheim/form", {
         method: "POST",
@@ -48,7 +47,6 @@ const Contact = () => {
         button: "Ok"
       }).then(e => navigate("/path/to/push"))));
     } catch (e) {
-      console.log("Error")
       swal({
         title: "Error",
         text: "Etwas ist Schief gelaufen, versuche später noch einmal",
@@ -60,7 +58,6 @@ const Contact = () => {
 
 
   const handleSubmit = () => {
-    console.log(data)
     if (data.name !== "" && data.e_mail !== "" && data.message !== "" && data.checked !== false){
       submitData()
     } else {

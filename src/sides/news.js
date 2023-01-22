@@ -29,7 +29,6 @@ const News = () => {
         <h1 className='font-extrabold text-2xl sm:text-3xl mt-6 inline-block'>Aktuelles</h1>
 
         {articleData.map((article, index) => {
-          console.log(article)
           return(<ArticleComponent image={`https://api.wrire.com${article.thumbnail}`} title={article.title} content={article.content} link={`/article/${article.id}`} unixTime={article.time} />)
         })}
         <p className='mb-8'></p>

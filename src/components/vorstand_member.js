@@ -6,8 +6,6 @@ const VorstandMember = ({ image, name, occupation, role, twitter, instagram, e_m
   const [urlName, setUrlName] = useState("")
 
   useEffect(() => {
-    console.log(introduction)
-    console.log("/personen/" + encodeURI(name) + "+" + index)
     setUrlName("/personen/" + encodeURI(name) + "+" + index)
   }, [])
  

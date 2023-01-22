@@ -30,17 +30,11 @@ const BecomeMember = () => {
     }
   }, [completeData])
 
-  useEffect(() => {
-    console.log(data)
-  }, [data])
-
   const submitData = () => {
-    console.log("submit")
     let formdata = new FormData()
     for ( var key in data ) {
       key != "checked" && formdata.append(key, data[key]);
     }
-    console.log(formdata)
     fetch("https://api.wrire.com/partner/ju-kirchheim/form", {
       method: "POST",
       body: formdata

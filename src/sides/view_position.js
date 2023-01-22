@@ -28,15 +28,12 @@ const ViewPosition = () => {
     });
 
     useEffect(() => {
-        console.log(positionData)
         let newID = positionID.split("&")[1]
         setID(newID)
-        console.log(newID)
 
         fetch('https://api.wrire.com/partner/ju-kirchheim/Positionen', { // fetch data from backend server
             method: 'GET',
         }).then((response) =>  response.json().then((data)=>{ 
-            console.log(data[newID])
             setContent(decodeURI(data[newID].content));
             setDate(parseDateTime(data[newID].date_time))
             setPositionData(data[newID])

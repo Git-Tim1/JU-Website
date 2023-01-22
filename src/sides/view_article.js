@@ -29,12 +29,14 @@ const ViewArticle = () => {
   }, []);
 
   useEffect(() => {
-    let unix_timestamp = articleData.time
+    let unix_timestamp =  articleData.time
     var dateVar = new Date(unix_timestamp * 1000);
 
-    var day = dateVar.getDay()
-    var month = dateVar.getMonth()
+    var day = dateVar.getDate()
+    var month = dateVar.getMonth() + 1
     var year = dateVar.getFullYear()
+
+    console.log(date)
 
     if (day < 10) {day = "0" + day.toString()}
     if (month < 10) {month = "0" + month.toString()}
@@ -42,6 +44,10 @@ const ViewArticle = () => {
     setDate(day + '.' + month + '.' + year)
   
   }, [articleData])
+
+  useEffect(() => {
+    console.log(date)
+  })
 
   return (
     <div>

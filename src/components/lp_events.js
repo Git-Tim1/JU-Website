@@ -10,7 +10,6 @@ const LP_Events = () => {
       fetch('https://api.wrire.com/partner/ju-kirchheim/Events', { // fetch data from backend server
         method: 'GET',
       }).then((response) => response.json().then((data) => {
-        console.log(data)
         setEventData(data)
       }))
       } catch (error){console.log(error)}

@@ -5,12 +5,14 @@ const ArticleComponent = ({image, title, content, link, unixTime, author}) => {
   const [date, setDate] = useState(null)
 
   useEffect(() => {
-    let unix_timestamp = unixTime
+    let unix_timestamp =  unixTime
     var dateVar = new Date(unix_timestamp * 1000);
 
-    var day = dateVar.getDay()
-    var month = dateVar.getMonth()
+    var day = dateVar.getDate()
+    var month = dateVar.getMonth() + 1
     var year = dateVar.getFullYear()
+
+    console.log(date)
 
     if (day < 10) {day = "0" + day.toString()}
     if (month < 10) {month = "0" + month.toString()}

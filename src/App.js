@@ -20,11 +20,9 @@ const App = () => {
   const [positionData, setPositionData] = useState([])
   
   useEffect(() => {
-    console.log(positionData)
     fetch('https://api.wrire.com/partner/ju-kirchheim/Positionen', { // fetch data from backend server
         method: 'GET',
     }).then((response) =>  response.json().then((data)=>{
-        console.log(data)
         setPositionData(data)
     }))
   }, [])
