@@ -77,7 +77,7 @@ const ImageCarousel = () => {
                                     max-w-[80%] xxs:left-8
                                     sm:left-9 sm:bottom-10  sm:px-[14px] sm:py-[6px]
                                     lg:left-10 lg:bottom-12`}>
-                                    <p className={` ${slide.short_title.length > 18 ? 'text-[16px]' : 'text-lg'} xxs:text-lg sm:text-xl lg:text-2xl`}>{slide.short_title}</p>
+                                    <p className={` ${slide.short_title.length > 18 ? 'text-[16px] 3xs:text-[17px]' : 'text-lg'} xxs:text-lg sm:text-xl lg:text-2xl`}>{slide.short_title}</p>
                                 </div>
 
                                 
