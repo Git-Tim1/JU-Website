@@ -19,11 +19,11 @@ body{
   }
 
   .slide{
-    @apply top-0 left-0 w-full h-full opacity-0 translate-x-[-50%] transition-all ease-linear;
+    @apply top-0 left-0 w-full h-full opacity-0 hidden transition-all ease-linear;
   }
 
   .current{
-    @apply opacity-100 translate-x-[0];
+    @apply opacity-100 block;
   }
 
   .content{
