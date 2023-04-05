@@ -46,20 +46,20 @@ const Campange = () => {
               <span className='relative left-1 xs:left-2'>
               Den Vorwand des Lärmschutzes sehen wir als ein reines Instrument, Tempo 30
               zu etablieren. In diesem Kontext beruft sich die Stadt Kirchheim auf
-              den Lärmaktionsplan <a href='#fn-1'>(Quelle 1)</a>. Hier geht aber insbesondere hervor, dass
+              den <i>Lärmaktionsplan</i> <a href='#fn-1' className='italic'>(Quelle 1)</a>. Hier geht aber insbesondere hervor, dass
               Messergebnisse oft nur minimal überschritten wurden. Wie auch im Aktionsplan
               aufgeführt, sind andere Möglichkeiten vorhanden, Lärm zu reduzieren. Die
               Möglichkeiten müssen mit voller Kraft angestrebt werden, bevor eine
               Tempobeschränkung zum Tragen kommt. Dies sollte immer die letzte Regulierung
               sein. Hinzufügend muss man erwähnen, dass eine Einsparung bei Tempo 30 von
-              nur 2 db(A) vorliegt <a href='#fn-2'>(Quelle 2)</a>, was für das menschliche Gehör kaum wahrnehmbar
+              nur 2 db(A) vorliegt <a href='#fn-2' className='italic'>(Quelle 2)</a>, was für das menschliche Gehör kaum wahrnehmbar
               ist.
               </span>
             </li>
             <li>
               <span className='relative left-1 xs:left-2'>
               Nach einer Erhebung des ADAC ist eine Erhöhung der Reisedauer um 25% zu
-              vermerken <a href='#fn-2'>(Quelle 2)</a>, wenn anstatt 50 km/h, 30km/h gefahren wird. Für
+              vermerken <a href='#fn-2' className='italic'>(Quelle 2)</a>, wenn anstatt 50 km/h, 30km/h gefahren wird. Für
               Privatpersonen scheint dieser Mehraufwand "nur" ein Ärgernis zu sein. Im
               Speziellen für freiwillige Feuerwehrleute auf Anfahrt zum Gerätehaus birgt Tempo
               30 allerdings eine ernstzunehmende Gefahr für die Allgemeinheit. Aber auch
@@ -71,7 +71,7 @@ const Campange = () => {
               Wir sehen die Förderung des öffentlichen Personennahverkehrs als
               unabdingbar an. Dieser kann aber nur eine Alternative zum eigenen PKW
               darstellen, wenn auch dessen Pünktlichkeit gegeben ist. Wie schon die
-              Lokalpresse berichtete <a href='#fn-3'>(Quelle 3)</a> ist das bei Tempo 30 nach unserer Meinung nicht
+              Lokalpresse berichtete <a href='#fn-3' className='italic'>(Quelle 3)</a> ist das bei Tempo 30 nach unserer Meinung nicht
               gegeben.
               </span>
             </li> 
@@ -79,7 +79,7 @@ const Campange = () => {
               <span className='relative left-1 xs:left-2'>
               Das Argument, durch Tempo 30 würde der Umweltschutz gefördert werden,
               sehen wir als unbegründet an. So ist die Landesanstalt für Umwelt, Messungen
-              und Naturschutz Baden-Württemberg <a href='#fn-4'>(Quelle 4)</a> schon im Jahr 2012 zu folgendem
+              und Naturschutz Baden-Württemberg <a href='#fn-4' className='italic'>(Quelle 4)</a> schon im Jahr 2012 zu folgendem
               Ergebnis gekommen: Die motorbedingte Belastung durch Feinstaub stieg durch
               Tempo 30 massiv im Vergleich zu Tempo 50. Auch die Stickstoffdioxid-Emissionen
               wurden in diesem Zuge gemessen. Im Vergleich zu Tempo 30, wurde hierbei eine
@@ -91,9 +91,9 @@ const Campange = () => {
           Zusammenfassend zeigt sich, dass die Argumentation gegen eine Tempobeschränkung
           auf 30 überwiegt. Das Ziel einer effektiven Verkehrsplanung muss sein, den Verkehrsfluss
           aufrechtzuerhalten.
-          <br /> <br />
+          <br />
           
-          <div className='w-full h-auto inline-block'>
+          <div className='w-full h-auto inline-block mt-2'>
             <p className='inline-block my-2 font-bold w-full'>Mit freundlicher Unterstützung:</p>
             <img src={img_1} className='w-1/5 float-left ml-[1.5%] mr-[6%]' />
             <img src={img_2} className='w-1/5 float-left mt-5 mr-[6%]'/>
@@ -104,7 +104,7 @@ const Campange = () => {
 
 
           <br />
-            Quellen
+            <p className='font-bold'>Quellen:</p>
             <ul className='ml-6 xs:ml-8 md:ml-10 mt-1' style={{ listStyleType: 'disc' }}>
               <li><span className='left-1 xs:left-2 relative'>(Quelle 1): <a id="fn-1" className='text-blue-800 underline ' href='https://www.kirchheim-teck.de/de/Wirtschaft-Bauen/Verkehr-Mobilitaet/Laermaktionsplan'>Lärmaktionsplan Stadt Kirchheim unter Teck (kirchheim-teck.de)</a></span></li>
               <li><span className='left-1 xs:left-2 relative'>(Quelle 2): <a id="fn-2" className='text-blue-800 underline ' href='https://www.adac.de/-/media/pdf/vek/fachinformationen/urbane-mobilitaet-und-laendlicher-verkehr/tempo30pro-contra-adac-bro.pdf'>Tempo 30 - Pro und Contra (adac.de)</a></span></li>
