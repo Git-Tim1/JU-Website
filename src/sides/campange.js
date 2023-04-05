@@ -46,7 +46,7 @@ const Campange = () => {
               <span className='relative left-1 xs:left-2'>
               Den Vorwand des Lärmschutzes sehen wir als ein reines Instrument, Tempo 30
               zu etablieren. In diesem Kontext beruft sich die Stadt Kirchheim auf
-              den <i>Lärmaktionsplan</i> <a href='#fn-1' className='italic'>(Quelle 1)</a>. Hier geht aber insbesondere hervor, dass
+              den <a href='#fn-1' className='italic'>Lärmaktionsplan (Quelle 1)</a>. Hier geht aber insbesondere hervor, dass
               Messergebnisse oft nur minimal überschritten wurden. Wie auch im Aktionsplan
               aufgeführt, sind andere Möglichkeiten vorhanden, Lärm zu reduzieren. Die
               Möglichkeiten müssen mit voller Kraft angestrebt werden, bevor eine
@@ -93,14 +93,15 @@ const Campange = () => {
           aufrechtzuerhalten.
           <br />
           
-          <div className='w-full h-auto inline-block mt-2'>
+          <div className='w-full mt-4 flex'><a className='bg-accent-blue-2 duration-200 hover:drop-shadow-lg inline-block mx-auto rounded-sm text-white font-bold text-lg px-2 py-1' href='https://www.openpetition.de/petition/blog/schnelle-nummer-nicht-mit-tempo-30?language=de_DE.utf8'>Jetzt Petition unterschreiben</a></div>
+          
+          <div className='w-full h-auto inline-block mt-5'>
             <p className='inline-block my-2 font-bold w-full'>Mit freundlicher Unterstützung:</p>
             <img src={img_1} className='w-1/5 float-left ml-[1.5%] mr-[6%]' />
             <img src={img_2} className='w-1/5 float-left mt-5 mr-[6%]'/>
             <img src={img_3} className='w-1/5 float-left mr-[6%]'/>
             <img src={img_4} className='w-1/5 float-left'/>
           </div>
-
 
 
           <br />

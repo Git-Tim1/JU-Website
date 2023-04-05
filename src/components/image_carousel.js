@@ -40,7 +40,7 @@ const ImageCarousel = () => {
     
     return (
         <div className='mt-[1rem] inline-block w-full group relative'>
-            {<div className='block sm:hidden group-hover:block relative text-white'>
+            {(articleData != [] && <div className='block sm:hidden group-hover:block relative text-white'>
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(currentSlide - 1)}}>
                     <MdKeyboardArrowLeft size={40} 
                     className='absolute top-36 sm:top-44 md:top-48 left-0 z-10 bg-accent-blue-1'/>
@@ -48,7 +48,7 @@ const ImageCarousel = () => {
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(currentSlide + 1)}}>
                     <MdKeyboardArrowRight size={40} className='absolute top-36 sm:top-44 md:top-48 right-0 z-10 bg-accent-blue-1'/>
                 </a>
-            </div>}
+            </div>)}
             
             <div className='absolute flex flex-row z-20 w-[4.5rem] h-auto text-white justify-between 
             left-[calc(50%-36px)] top-[300px] sm:top-[355px] md:top-[415px]

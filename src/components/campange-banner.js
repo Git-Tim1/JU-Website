@@ -30,7 +30,7 @@ const CampangeBanner = () => {
           <div className={`h-full max-w-[60rem] w-[90%] ${!isScrolled ? 'md:relative' : 'relative'} mx-auto flex`}>
                 <div className={`font-bold h-auto text-white ${isScrolled ? ' text-[15px] 3xs:text-base sm:text-lg md:text-xl w-full' : 'text-[26px] leading-8 xs:text-3xl sm:text-4xl'} my-auto z-50 duration-500`}>
                     <Link to="/tempo-50">
-                        <p className={isScrolled && '4xs:float-left 3xs:float-none xs:float-left'} >Schnelle Nummer?</p>
+                        <p className={`${isScrolled && '4xs:float-left 3xs:float-none xs:float-left'}`} >Schnelle Nummer?</p>
                         <p className={`text-yellow-300 ${isScrolled && 'float-left 4xs:ml-1 3xs:ml-0 xs:ml-1 sm:ml-2 '}`}>Nicht mit Tempo 30!</p>
                     </Link>
                     <div className={`text-black ${isScrolled ? 'text-sm sm:text-base md:text-lg px-[6px] absolute right-0 mt-0' : 'text-sm 3xs:text-base xs:text-lg  sm:text-xl mt-2'} font-bold z-40 duration-200`}>
