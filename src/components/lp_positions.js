@@ -35,7 +35,7 @@ const LP_Positions = () => {
                     px-3 py-1 text-xl
                     bg-accent-blue-2 text-white
                     font-bold
-                    inline-block hover:drop-shadow-lg'>
+                    inline-block hover:drop-shadow-lg duration-300'>
                         Alle Positionen anzeigen
                 </h1>
             </Link>

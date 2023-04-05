@@ -2,6 +2,7 @@ import React, {useState, useEffect, useLayoutEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Footer from '../components/footer'
 import Header from '../components/header'
+import { Navigate } from 'react-router-dom'
 import PositionContext from '../context/positionContext'
 
 const ViewPosition = () => {
@@ -30,6 +31,9 @@ const ViewPosition = () => {
     useEffect(() => {
         let newID = positionID.split("&")[1]
         setID(newID)
+        console.log(positionID)
+
+        if (positionID == 'Schnelle Nummer') {navigate('/tempo-50')}
 
         fetch('https://api.wrire.com/partner/ju-kirchheim/Positionen', { // fetch data from backend server
             method: 'GET',
@@ -48,11 +52,11 @@ const ViewPosition = () => {
                 <div className='mt-[1.5rem] block w-full h-auto float-left'>
                     <img className='aspect-video lg:max-h-[400px] lg:aspect-auto lg:object-cover w-full' src={positionData.picture} />
                     <div className='mt-3 mb-1 bg-accent-blue-1 w-auto h-auto inline-block px-2 py-[2px]'>
-                        <h2 className='text-md sm:text-lg font-bold text-white'>Stand: {date} </h2>
+                        <h2 className='text-sm xxs:text-base sm:text-lg font-bold text-white'>Stand: {date} </h2>
                     </div>
-                    <h1 className='text-2xl sm:text-3xl font-extrabold'>{ positionData.title}</h1>
+                    <h1 className='text-xl xxs:text-2xl sm:text-3xl font-extrabold'>{ positionData.title}</h1>
 
-                    <p className='text-md sm:text-[17px] mt-2 sm:text-justify whitespace-pre-line'>{ content }</p>
+                    <p className='text-sm xxs:text-base sm:text-lg mt-2 whitespace-pre-line'>{ content }</p>
 
                     <div className='w-full flex justify-center mb-6'><a href={positionData.PDF}  download={"Position_" + positionData.topic} className='py-1.5 px-3 bg-accent-blue-2 text-white text-lg font-bold mt-4 '>Pressemitteilung herunterladen</a></div>
                 </div>

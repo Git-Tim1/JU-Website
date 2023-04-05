@@ -39,7 +39,7 @@ const ImageCarousel = () => {
 
     
     return (
-        <div className='mt-[1.5rem] inline-block w-full group relative'>
+        <div className='mt-[1rem] inline-block w-full group relative'>
             <div className='block sm:hidden group-hover:block relative text-white'>
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(currentSlide - 1)}}>
                     <MdKeyboardArrowLeft size={40} 

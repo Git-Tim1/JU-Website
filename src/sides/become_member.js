@@ -11,10 +11,6 @@ const BecomeMember = () => {
     document.title = "Mitglied werden - Junge Union Kirchheim"
   }, []);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-  });
-
   const [send, setSend] = useState(false)
   const [data, setData] = useState({sex: "male", vorname: "", nachname: "", e_mail: "", street_and_number: "", place_of_residence:"", zip:"", birth_date: "", bank_name: "",  iban: "", bic: "", checked: false})
   const [completeData, setCompleteData] = useState(false)

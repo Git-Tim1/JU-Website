@@ -12,10 +12,10 @@ const Header = () => {
 
     return (
         <>
-            <header className='w-full h-[5rem] drop-shadow-sm bg-white fixed z-20 top-0'>
+            <header className='w-full h-[5rem] drop-shadow-sm bg-white fixed z-50 top-0'>
                 <div className='h-full max-w-[60rem] w-[90%] m-auto font-semibold'>
                     <ul className={`float-left h-full hidden sm:flex text-accent-blue-3`}>
-                        <li className='mr-4 md:mr-5 my-auto hover:text-accent-blue-2 group py-2'>
+                        <li className='mr-4 md:mr-5 my-auto hover:text-accent-blue-2 group py-2 duration-150'>
                             <p className='cursor-pointer uppercase mt-2'>Über uns</p>
 
                             <div className='w-auto h-auto font-medium  z-2 
@@ -23,16 +23,16 @@ const Header = () => {
                                     group-hover:block absolute top-16 border-t-2 border-accent-blue-2 
                                     text-accent-color-3'>
                                 <ul className='text-black'>
-                                    <Link to="/aktuelles"><li className='px-5 py-3 mb-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white'>Aktuelles</li></Link>
-                                    <Link to="/events"><li className='px-5 py-3 my-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white'>Termine und Veranstaltungen</li></Link>
-                                    <Link to="/vorstand"><li className='px-5 py-3 mt-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white'>Vorstand</li></Link>
+                                    <Link to="/aktuelles"><li className='px-5 py-3 mb-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white duration-150'>Aktuelles</li></Link>
+                                    <Link to="/events"><li className='px-5 py-3 my-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white duration-150'>Termine und Veranstaltungen</li></Link>
+                                    <Link to="/vorstand"><li className='px-5 py-3 mt-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white duration-150'>Vorstand</li></Link>
                                 </ul>
                             </div>
                         </li>
                        
-                        <Link to="/positionen" className='h-full flex'><li className='mx-4 my-auto hover:text-accent-blue-2 py-2 uppercase'><p className='mt-2'>Positionen</p></li></Link>
-                        <Link to="/contact" className='h-full flex'><li className='mx-4 my-auto cursor-pointer hover:text-accent-blue-2 uppercase'><p className='mt-2'>Kontakt</p></li></Link>
-                        <li className='ml-4 md:ml-4 my-auto hover:text-accent-blue-2 group py-2'>
+                        <Link to="/positionen" className='h-full flex'><li className='mx-4 my-auto hover:text-accent-blue-2 py-2 uppercase duration-150'><p className='mt-2'>Positionen</p></li></Link>
+                        <Link to="/contact" className='h-full flex'><li className='mx-4 my-auto cursor-pointer hover:text-accent-blue-2 uppercase duration-150'><p className='mt-2'>Kontakt</p></li></Link>
+                        <li className='ml-4 md:ml-4 my-auto hover:text-accent-blue-2 group py-2 duration-150'>
                             <p className='cursor-pointer uppercase mt-2'>Unterstützen</p>
 
                             <div className='w-auto h-auto font-medium  z-2 
@@ -40,8 +40,8 @@ const Header = () => {
                                     group-hover:block absolute top-16 border-t-2 border-accent-blue-2 
                                     text-accent-color-3'>
                                 <ul className='text-black'>
-                                    <Link to="/spenden"><li className='px-5 py-3 mb-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white'>Spenden</li></Link>
-                                    <Link to="/mitglied-werden"><li className='px-5 py-3 mt-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white'>Mitglied werden</li></Link>
+                                    <Link to="/spenden"><li className='px-5 py-3 mb-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white duration-150'>Spenden</li></Link>
+                                    <Link to="/mitglied-werden"><li className='px-5 py-3 mt-1 bg-decent-blue cursor-pointer hover:bg-accent-blue-2 hover:text-white duration-150'>Mitglied werden</li></Link>
                                 </ul>
                             </div>
                         </li>

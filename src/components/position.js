@@ -14,7 +14,7 @@ const Position = ({ topic, image, lp, index }) => {
   
     
     return (        
-        <a href={"/position/" + link} className={`w-full inline-block relative mt-1 opacity-90 hover:opacity-100 drop-shadow hover:drop-shadow-lg aspect-4/3 xxs:aspect-video sm:aspect-4/3 md:aspect-video ${lp && 'lg:aspect-4/3'}`}>
+        <a href={"/position/" + link} className={`w-full inline-block relative mt-1 opacity-90 hover:opacity-100 drop-shadow hover:drop-shadow-lg aspect-4/3 xxs:aspect-video sm:aspect-4/3 md:aspect-video ${lp && 'lg:aspect-4/3'} duration-300`}>
             <img className={`object-cover h-full w-full`} src={image} />
             <h1 className='absolute
                 text-lg 3xs:text-xl sm:text-lg md:text-xl 

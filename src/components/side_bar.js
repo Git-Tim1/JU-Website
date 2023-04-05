@@ -7,7 +7,7 @@ const SideBar = () => {
     const [showMore, setShowMore] = useState(false)
     const [showMore2, setShowMore2] = useState(false)
     return (
-    <div className='z-30 w-full top-[4.5rem] fixed bg-accent-blue-3 border-t border-gray-300 uppercase sm:hidden'>
+    <div className='w-full z-[100] top-[4.5rem] fixed bg-accent-blue-3 border-t border-gray-300 uppercase sm:hidden'>
         <ul className='m-auto py-2 font-semibold text-lg'>
             <li className='py-3  text-white  hover:bg-accent-blue-2'><Link to='/home'><div className='w-[90%] mx-auto'>Startseite</div></Link></li>
             <a href="#" onClick={e => {e.preventDefault(); setShowMore(!showMore)}}>

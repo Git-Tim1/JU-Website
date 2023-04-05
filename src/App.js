@@ -15,6 +15,7 @@ import Donate from './sides/donate';
 import Imprint from './sides/imprint';
 import PositionContext from './context/positionContext'
 import Datenschutzhinweise from './sides/datenschutzhinweise';
+import Campange from './sides/campange';
 
 const App = () => {
   const [positionData, setPositionData] = useState([])
@@ -29,7 +30,7 @@ const App = () => {
 
   return (
     <PositionContext.Provider value={positionData}>
-      <div className="font-['Helvatica Neue']">
+      <div className="font-['Helvatica Neue'] pr-2">
           <Router>
             <Routes>
               <Route path="/home" element={<LandingPage />} /> 
@@ -38,6 +39,7 @@ const App = () => {
               <Route path="/vorstand" element={<Vorstand />} />
               <Route path="/positionen" element={<Positions />} />
               <Route path="/aktuelles" element={<News />} />
+              <Route path="/tempo-50" element={<Campange />} />
               <Route path="/position/">
                 <Route path=':positionID' element={<ViewPosition />} />
               </Route>
