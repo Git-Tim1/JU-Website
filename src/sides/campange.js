@@ -95,16 +95,17 @@ const Campange = () => {
           
           <div className='w-full mt-4 flex'><a className='bg-accent-blue-2 duration-200 hover:drop-shadow-lg inline-block mx-auto rounded-sm text-white font-bold text-lg px-2 py-1' href='https://www.openpetition.de/petition/blog/schnelle-nummer-nicht-mit-tempo-30?language=de_DE.utf8'>Jetzt Petition unterschreiben</a></div>
           
-          <div className='w-full h-auto inline-block mt-5'>
+          <div className='w-full h-auto inline-block mt-5 px-2'>
             <p className='inline-block my-2 font-bold w-full'>Mit freundlicher Unterstützung:</p>
-            <img src={img_1} className='w-1/5 float-left ml-[1.5%] mr-[6%]' />
-            <img src={img_2} className='w-1/5 float-left mt-5 mr-[6%]'/>
-            <img src={img_3} className='w-1/5 float-left mr-[6%]'/>
-            <img src={img_4} className='w-1/5 float-left'/>
+            <div className='max-w-full flex flex-row overflow-hidden justify-between'>
+              <img src={img_1} className='float-left object-contain w-[30%] md:w-[25%] lg:w-[20%] h-auto' />
+              <img src={img_3} className='float-left object-contain w-[30%] md:w-[25%] lg:w-[20%] h-auto'/>
+              <img src={img_4} className='float-left object-contain w-[30%] md:w-[25%] lg:w-[20%] h-auto md:mr-[18%] lg:mr-[30%]'/>
+            </div>
           </div>
 
 
-          <br />
+          <br /> <br />
             <p className='font-bold'>Quellen:</p>
             <ul className='ml-6 xs:ml-8 md:ml-10 mt-1' style={{ listStyleType: 'disc' }}>
               <li><span className='left-1 xs:left-2 relative'>(Quelle 1): <a id="fn-1" className='text-blue-800 underline ' href='https://www.kirchheim-teck.de/de/Wirtschaft-Bauen/Verkehr-Mobilitaet/Laermaktionsplan'>Lärmaktionsplan Stadt Kirchheim unter Teck (kirchheim-teck.de)</a></span></li>
