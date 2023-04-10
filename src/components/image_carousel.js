@@ -1,7 +1,42 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill, BsCircleFill } from 'react-icons/bs'
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import { ArticleContext } from '../context'
+
+const ImgPreview = ({ articleData, currentSlide }) => {
+    return(
+        <>
+        {articleData.map((slide, index) => {
+            return (
+                <div className={index === currentSlide ? "slide current" : "slide"} key={index}>
+                    {index === currentSlide && (
+                        <>
+                        <Link to={`/article/${slide.id}`}>
+                            <img src={`https://api.wrire.com${slide.thumbnail}`} alt="slide-img" 
+                            className='z-1 h-[320px] sm:h-[380px] md:h-[440px] w-full object-cover' 
+                            />
+                            <div className={`font-bold absolute bg-accent-blue-3 text-white
+                                overflow-hidden
+                                px-2 xxs:px-3 py-1
+                                left-5 bottom-8 text-lg 
+                                max-w-[80%] xxs:left-8
+                                sm:left-9 sm:bottom-10  sm:px-[14px] sm:py-[6px]
+                                lg:left-10 lg:bottom-12`}>
+                                <p className={` ${slide.short_title.length > 18 ? 'text-[16px] 3xs:text-[17px]' : 'text-lg'} xxs:text-[19px] sm:text-xl lg:text-2xl`}>{slide.short_title}</p>
+                            </div>
+
+                            
+                        </Link>
+                        </>
+                    )}
+                </div>
+                )
+            })} 
+        </>
+    )
+}
+
 
 const ImageCarousel = () => {
     let slideInterval;
@@ -9,19 +44,22 @@ const ImageCarousel = () => {
     let autoscroll = true;
 
     const [currentSlide, setCurrentSlide] = useState(0)
-    const [articleData, setArticleData] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    const articleData = useContext(ArticleContext)
 
     const autoSlide = () => {
         slideInterval = setInterval(() => setCurrentSlide(currentSlide + 1), intervalTime)    
     }
 
     useEffect(() => {
-        fetch('https://api.wrire.com/partner/ju-kirchheim?page=0', { // fetch data from backend server
-            method: 'GET',
-        }).then((response) =>  response.json().then((data)=>{
-            setArticleData(data)
-        }))
-    }, [])
+      if (articleData[0] !== " "){
+        console.log(articleData)
+        setLoading(false)
+      } 
+    
+    }, [articleData])
+    
 
     useEffect(() => {
         if (currentSlide == 4) {
@@ -61,32 +99,16 @@ const ImageCarousel = () => {
                 <a href="#" onClick={e => {e.preventDefault(); setCurrentSlide(3)}}><BsCircleFill size={10} className={currentSlide == 3 ? "opacity-100" : "opacity-50"} /></a>
             </div>
             
-            {articleData.map((slide, index) => {
-                return (
-                    <div className={index === currentSlide ? "slide current" : "slide"} key={index}>
-                        {index === currentSlide && (
-                            <>
-                            <Link to={`/article/${slide.id}`}>
-                                <img src={`https://api.wrire.com${slide.thumbnail}`} alt="slide-img" 
-                                className='z-1 h-[320px] sm:h-[380px] md:h-[440px] w-full object-cover' 
-                                />
-                                <div className={`font-bold absolute bg-accent-blue-3 text-white
-                                    overflow-hidden
-                                    px-2 xxs:px-3 py-1
-                                    left-5 bottom-8 text-lg 
-                                    max-w-[80%] xxs:left-8
-                                    sm:left-9 sm:bottom-10  sm:px-[14px] sm:py-[6px]
-                                    lg:left-10 lg:bottom-12`}>
-                                    <p className={` ${slide.short_title.length > 18 ? 'text-[16px] 3xs:text-[17px]' : 'text-lg'} xxs:text-[19px] sm:text-xl lg:text-2xl`}>{slide.short_title}</p>
-                                </div>
-
-                                
-                            </Link>
-                            </>
-                        )}
-                    </div>
-                )
-            })} 
+            {!loading ? 
+            <>
+                <ImgPreview articleData={articleData} currentSlide={currentSlide} />
+            </> :
+            <>
+                <div className='z-1 h-[320px] sm:h-[380px] flex justify-center md:h-[440px] w-full bg-accent-blue-2 opacity-25'>
+                    <div className='loader'></div>
+                </div>
+            </>
+            }
         </div>
     )
 }

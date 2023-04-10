@@ -1,11 +1,13 @@
-import React, {useLayoutEffect} from 'react'
+import React, {useEffect} from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 
 const Imprint = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0)
-  });
+    document.title = "Impressum - Junge Union Kirchheim"
+
+  }, []);
   let text1 = 'Dienstanbieter dieser Seite ist die \n \
               Junge Union – Stadtverband Kirchheim unter Teck \n \
               Adresse auf Anfrage: kontakt@ju-kirchheim.de \n \n \

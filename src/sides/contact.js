@@ -14,6 +14,7 @@ const Contact = () => {
 
   useEffect(() => {
     document.title = "Kontakt - Junge Union Kirchheim"
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
@@ -26,9 +27,6 @@ const Contact = () => {
   }, [completeData])
   
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-  });
 
   const submitData = () => {
 

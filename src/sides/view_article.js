@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Header from '../components/header'
-import * as ReactBootStrap from 'react-bootstrap'
 import Footer from '../components/footer'
 
-const LoadingText = ({x, y, z}) => {
+export const LoadingText = ({x, y, z}) => {
   return (
     <div className='h-4 xs:h-5 w-full mt-2 animation rounded'>
       <div className={`background-masker btn-divide-left ${x}`}>
@@ -38,7 +37,7 @@ const ViewArticle = () => {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
         }
-      }).then((response) => response.json().then((data) => {setArticleData(data); setLoading(false)}))
+      }).then((response) => response.json().then((data) => {setArticleData(data); setLoading(false); document.title = data.short_title + " - Junge Union Kirchheim"}))
     } catch (error){console.log(error)}
   }, []);
 
@@ -50,7 +49,6 @@ const ViewArticle = () => {
     var month = dateVar.getMonth() + 1
     var year = dateVar.getFullYear()
 
-    console.log(date)
 
     if (day < 10) {day = "0" + day.toString()}
     if (month < 10) {month = "0" + month.toString()}

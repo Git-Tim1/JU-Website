@@ -1,11 +1,13 @@
-import React, {useLayoutEffect} from 'react'
+import React, {useEffect} from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 
 const Datenschutzhinweise = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0)
-  });
+    document.title = "Datenschutzhinweise - Junge Union Kirchheim"
+
+  }, []);
   return (
     <div className='h-full'>
         <Header />

@@ -1,11 +1,12 @@
-import React, {useLayoutEffect} from 'react'
+import React, {useEffect, useLayoutEffect} from 'react'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
 const Donate = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
+    document.title = "Spenden - Junge Union Kirchheim"
     window.scrollTo(0, 0)
-  });
+  }, []);
 
   let text1 = 'Die Junge Union (JU) begeistert erfolgreich seit 1947 junge Menschen zu politischem Engagement. Ob Roland Koch, Gerhard Stoltenberg, Edmund Stoiber, Friedrich Merz, Jürgen Rüttgers, Günther Oettinger oder Helmut Kohl – nahezu alle Spitzenpolitiker von CDU und CSU waren einmal in der JU aktiv und haben dort ihr politisches Handwerkszeug gelernt. \
               Die JU versteht sich als der Erneuerungsmotor von CDU und CSU und betreibt eine Interessenspolitik für künftige Generationen. Dies steht so nicht nur in unserem Grundsatzprogramm, sondern wird von vielen, engagierten JU-Mitgliedern täglich praktiziert. \

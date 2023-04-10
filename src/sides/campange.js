@@ -1,18 +1,18 @@
-import React, {useLayoutEffect} from 'react'
+import React, {useEffect} from 'react'
 import Header from '../components/header'
 import Footer from '../components/footer'
 var Tempo50 = require('../images/50-schild.png')
 var img_1 = require('../images/Logo_Hass.jpg')
-var img_2 = require('../images/logo_2.png')
 var img_3 = require('../images/logo_3.png')
 var img_4 = require('../images/logo_4.png')
 
 
 const Campange = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0)
-  });
-
+    document.title = "Schnelle Nummer - Junge Union Kirchheim"
+  }, [])
+  
   return (
     <div>
       <Header />

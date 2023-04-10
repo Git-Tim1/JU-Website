@@ -19,11 +19,11 @@ body{
   }
 
   .slide{
-    @apply top-0 left-0 w-full h-full opacity-0 transition-all ease-linear duration-200;
+    @apply top-0 left-0 w-full h-full hidden transition-all ease-linear;
   }
 
   .current{
-    @apply opacity-100 block duration-75;
+    @apply block;
   }
 
   .content{
@@ -73,4 +73,26 @@ body{
   top: 0;
   height: 100%;
   width: 10px;
+}
+
+.btn-divide-left-h {
+  top: 0;
+  height: 100%;
+  width: 16px;
+}
+
+
+.loader {
+  margin: auto;
+  border: 5px solid #EAF0F6;
+  border-radius: 50%;
+  border-top: 5px solid;
+  width: 34px;
+  height: 34px;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

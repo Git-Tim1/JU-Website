@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useLayoutEffect } from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Position from '../components/position'
-import PositionContext from '../context/positionContext'
+import { PositionContext } from '../context'
 
 
 const Positions = () => {
@@ -10,12 +10,9 @@ const Positions = () => {
 
   useEffect(() => {
     document.title = "Positionen - Junge Union Kirchheim"
-
+    window.scrollTo(0, 0)
   }, []);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-  });
   return (
     <div>
       <Header />

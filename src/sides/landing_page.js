@@ -6,16 +6,13 @@ import ImageCarousel from '../components/image_carousel'
 import Introduction from '../components/introduction'
 import LP_Events from '../components/lp_events'
 import LP_Positions from '../components/lp_positions'
-import SideBar from '../components/side_bar'
 
 const LandingPage = () => {
   useEffect(() => {
     document.title = "Junge Union Kirchheim"
+    window.scrollTo(0, 0)
   }, []);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-  });
   return (
     <div>
       <Header />

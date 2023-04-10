@@ -1,7 +1,7 @@
 import React, {useEffect, useContext} from 'react'
 import Position from './position'
 import { Link } from 'react-router-dom'
-import PositionContext from '../context/positionContext'
+import { PositionContext } from '../context'
 
 const LP_Positions = () => {
     const positionData = useContext(PositionContext)
