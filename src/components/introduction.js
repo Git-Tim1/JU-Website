@@ -46,7 +46,7 @@ const Introduction = () => {
           Interesse? Dann komm doch mal vorbei!
         </p>
 
-        <img src="https://media.discordapp.net/attachments/804256706514649159/1009568271126757487/HJR-5D4-02240-768x512.jpeg"
+        <img src={Giancarlo}
         className='xs:hidden xxs:h-64 w-full object-cover mt-2' />
         <p className='text-sm xxs:text-base sm:text-lg float-left italic mt-2 sm:mt-1'>
             - Giancarlo Crescente, Vorsitzender

@@ -19,10 +19,7 @@ const BecomeMember = () => {
 
   useEffect(() => {
     if (completeData == true){
-      swal({
-        icon: "error",
-        title: "Formular vollständig aufüllen"
-      })
+       
     }
   }, [completeData])
 
